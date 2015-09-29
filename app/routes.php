@@ -15,7 +15,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-
+Route::get('/x2', function()
+{
+	return View::make('hello-x2');
+});
 // Route::get('/', 'HomeController@showWelcome');
 
 // Route::controller('auth', 'AuthController');

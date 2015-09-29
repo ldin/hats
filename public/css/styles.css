@@ -36,11 +36,14 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #slider {  background: url('../img/slider/top-image01.jpg') no-repeat; background-size: cover; }
 #slider .left-block{background-color: rgba(0, 0, 0, 0.3); padding: 160px 30px;}
 #slider .left-block .title{ font-size: 44px; line-height: 34px; height: 100%;}
-#slider .right-block{padding-top: 160px}
+#slider .right-block{padding-top: 120px}
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin: 0 2px; padding: 4px 0;}
 #slider .right-block .slide{padding: 0 2px;}
 #slider .right-block .slide p{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3); }
 #slider .right-block img{width: 100%;}
+@media (max-width: 768px) {
+  #slider .right-block{padding: 20px 0;} 
+}
 
 /*we-service*/
 #we-service{padding: 50px 0}
@@ -49,41 +52,74 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 
 /*top-pages*/
 #top-pages{padding-bottom: 30px;}
-#top-pages0 .block{ height: 250px; margin-bottom: 20px; overflow: hidden; transition: 1s;}
-#top-pages0 .block:hover{background: #ff0066;}
-#top-pages0 .block:hover h2, #top-pages0 .block:hover p{ color: #fff;}
-#top-pages0 .block .description,
-#top-pages0 .block:hover .image {display: none;}
-#top-pages0 .block .image,
-#top-pages0 .block .title,
-#top-pages0 .block .description {width: 50%; float: left; }
-#top-pages0 .block:hover .description{display: block; padding: 20px;}
-#top-pages0 .block .title{padding: 20px; }
-#top-pages0 .block .description{padding: 20px;}
-#top-pages0 .block .description p{ height: 160px; overflow: hidden;}
-#top-pages0 .block .description .btn{padding: 5px 50px;}
 
-#top-pages1 .block{ margin-bottom: 20px; overflow: hidden; position: relative; }
-#top-pages1 .block .image img{width: 100%; border-left: 1px solid #fff;}
-#top-pages1 .block .part{height: 250px; float: left; width: 50%; transition:  0.5s;}
-#top-pages1 .block .title{padding: 20px; background: #f6f6f6;
+#top-pages .block{ margin-bottom: 20px; overflow: hidden; position: relative; }
+#top-pages .block .image img{width: 100%; margin-left: 1px; }
+#top-pages .block .part{height: 250px; float: left; width: 50%; transition:  0.5s;}
+#top-pages .block .title{padding: 20px; background: #f6f6f6;
   -moz-transform: translateX(0); 
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0); 
   -o-transform: translateX(0);
   transform:translateX(0);  
 }
-#top-pages1 .block .description{padding: 20px; position: absolute; background: #ff0066; color:#fff; left: 50%; opacity1: 0}
-#top-pages1 .block .description p{ height: 160px; overflow: hidden;}
-#top-pages1 .block .description .btn{padding: 5px 50px;}
-#top-pages1 .block:hover .title{ background: rgba(255, 255, 255, 0.8);
+#top-pages .block .description{padding: 20px; position: absolute; background: #ff0066; color:#fff; left: 50%; }
+#top-pages .block .description p{ height: 160px; overflow: hidden;}
+#top-pages .block .description .btn{padding: 5px 50px;}
+#top-pages .block:hover .title{ background: rgba(255, 255, 255, 0.8);
   -moz-transform: translateX(-100%); 
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%); 
   -o-transform: translateX(-100%);
   transform:translateX(-100%);}
-/*#top-pages1 .block:hover h2, #top-pages1 .block:hover p{ color: #fff;}*/
-#top-pages1 .block:hover .description{  opacity: 1}
+/*#top-pages .block:hover h2, #top-pages .block:hover p{ color: #fff;}*/
+#top-pages .block:hover .description{  opacity: 1}
+
+#top-pages .block-left .image{float: right;}
+#top-pages .block-left .description{ left: 0;}
+#top-pages .block .image img{width: 100%; margin-left: 0; }
+#top-pages .block-left:hover .title{
+  -moz-transform: translateX(100%); 
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%); 
+  -o-transform: translateX(100%);
+  transform:translateX(100%);}
+
+/*test*/
+#top-pages .block2{ margin-bottom: 20px; min-height: 250px; overflow: hidden; position: relative; }
+#top-pages .block2 .part{height: 250px;  padding: 0; transition:  0.5s;}
+#top-pages .block2 .title{position: absolute; padding: 20px; background: #f5f5f5; }
+#top-pages .block2 .description{padding: 20px; background: #ff0066; color:#fff; }
+#top-pages .block2 .description p{ height: 160px; overflow: hidden;}
+#top-pages .block2 .image img{width: 100%; height: 100%; margin-left: 0; }
+#top-pages .block2 .title{padding: 20px; background: #f6f6f6;
+  -moz-transform: translateX(100%); 
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%); 
+  -o-transform: translateX(100%);
+  transform:translateX(100%);
+   
+}
+#top-pages .block2:hover .title{ background: rgba(255, 255, 255, 0.8);
+  -moz-transform: translateX(0); 
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0); 
+  -o-transform: translateX(0);
+  transform:translateX(0); 
+}
+@media (max-width: 768px) { 
+  #top-pages .block2 .title{padding: 20px; background: #f6f6f6;
+    -moz-transform: translateY(100%); 
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%); 
+    -o-transform: translateY(100%);
+    transform:translateY(100%);
+     
+  }
+}
+
+/*test*/
+
 
 
 /*advice*/

@@ -64,6 +64,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #top-pages0 .block .description .btn{padding: 5px 50px;}
 
 #top-pages1 .block{ margin-bottom: 20px; overflow: hidden; position: relative; }
+#top-pages1 .block .image img{width: 100%; border-left: 1px solid #fff;}
 #top-pages1 .block .part{height: 250px; float: left; width: 50%; transition:  0.5s;}
 #top-pages1 .block .title{padding: 20px; background: #f6f6f6;
   -moz-transform: translateX(0); 

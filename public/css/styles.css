@@ -40,7 +40,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin: 0 2px; padding: 4px 0;}
 #slider .right-block .slide{padding: 0 2px;}
 #slider .right-block .slide p{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3); }
-#slider .right-block img{max-width: 100%;}
+#slider .right-block img{width: 100%;}
 
 /*we-service*/
 #we-service{padding: 50px 0}

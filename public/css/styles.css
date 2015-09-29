@@ -65,7 +65,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 
 #top-pages1 .block{ margin-bottom: 20px; overflow: hidden; position: relative; }
 #top-pages1 .block .part{height: 250px; float: left; width: 50%; transition:  0.5s;}
-#top-pages1 .block .title{padding: 20px; background: #fff;
+#top-pages1 .block .title{padding: 20px; background: #f6f6f6;
   -moz-transform: translateX(0); 
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0); 
@@ -75,7 +75,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #top-pages1 .block .description{padding: 20px; position: absolute; background: #ff0066; color:#fff; left: 50%; opacity1: 0}
 #top-pages1 .block .description p{ height: 160px; overflow: hidden;}
 #top-pages1 .block .description .btn{padding: 5px 50px;}
-#top-pages1 .block:hover .title{ 
+#top-pages1 .block:hover .title{ background: rgba(255, 255, 255, 0.8);
   -moz-transform: translateX(-100%); 
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%); 
@@ -91,7 +91,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #advice p{font-size: 18px;}
 #advice em{color: #ff0066; font-style:normal;}
 #advice .block{padding: 5px;}
-#advice .block p{background-color: #eee; height: 250px; padding: 30px;}
+#advice .block p{background-color: #f6f6f6; height: 250px; padding: 30px;}
 
 /*footer*/
 footer .container{background: #ff0066; color: #fff; min-height: 200px; padding: 40px;}

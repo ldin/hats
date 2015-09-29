@@ -33,7 +33,7 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 /*slider*/
 #slider{color: #fff;}
 #slider p{font-size: 18px;}
-#slider .head-slide{  background: url('../img/slider/top-image01.jpg') no-repeat; background-size: cover; }
+#slider {  background: url('../img/slider/top-image01.jpg') no-repeat; background-size: cover; }
 #slider .left-block{background-color: rgba(0, 0, 0, 0.3); padding: 160px 30px;}
 #slider .left-block .title{ font-size: 44px; line-height: 34px; height: 100%;}
 #slider .right-block{padding-top: 160px}

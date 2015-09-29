@@ -62,7 +62,7 @@
 		<section id="slider">
 			<div class="container">
 				<div class="row head-slide">
-					<div class="col-sm-3 col-sm-offset-2 col-xs-12 left-block">
+					<div class="col-sm-4 col-xs-12 left-block">
 						<p class="title">
 							Готовимся к сезону:
 						</p>
@@ -76,7 +76,7 @@
 							<a href="#" class="btn btn-solid">Заказать каталог</a>
 						</div>					
 					</div>
-					<div class="col-sm-5 col-xs-12 right-block" >
+					<div class="col-sm-8 col-xs-12 right-block" >
 						<div class="block">
 							<div class="row text-center">
 								<p class="top-line">Вспоминаем модели прошлых сезонов</p>
@@ -111,7 +111,7 @@
 		<section id="we-service">
 			<div class="container ">
 				<div class="row">
-					<div class="col-sm-7 col-sm-offset-5 col-xs-12">
+					<div class="col-sm-8 col-sm-offset-4 col-xs-12">
 						<h1>Arin-shapeau</h1>
 						<p>Коллекция детских и женских вязанных шапок<br> для оптовых покупателей</p>
 					</div>

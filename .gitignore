@@ -12,4 +12,4 @@ app/config/local/
 #bootstrap/start.php
 #app/config/app.php
 #app/config/database.php
-public/robots.txt
+#public/robots.txt

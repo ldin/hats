@@ -44,6 +44,33 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 @media (max-width: 768px) {
   #slider .right-block{padding: 20px 0;} 
 }
+#slider .carousel-indicators {bottom: -45px;}
+#slider .carousel-indicators .active {background-color:#ff0066;}
+#slider .carousel-indicators li{margin: 1px 15px;}
+#slider .carousel-indicators li:before {
+  content: ''; position: absolute; margin-left: -20px; margin-top: -1px;
+display: inline-block; 
+width: 10px;
+height: 10px;
+cursor: pointer;
+background-color: #000\9;
+background-color: rgba(0,0,0,0);
+border: 1px solid #fff;
+border-radius: 10px;
+}
+#slider .carousel-indicators li:after {
+  content: ''; position: absolute; margin-left: 9px; margin-top: -1px;
+display: inline-block;
+width: 10px;
+height: 10px;
+cursor: pointer;
+background-color: #000\9;
+background-color: rgba(0,0,0,0);
+border: 1px solid #fff;
+border-radius: 10px;
+}
+#slider .carousel-indicators li.active:before{background-color:#ff0066; width: 12px; height: 12px; }
+#slider .carousel-indicators li.active:after{background-color:#ff0066;width: 12px; height: 12px; }
 
 /*we-service*/
 #we-service{padding: 50px 0}

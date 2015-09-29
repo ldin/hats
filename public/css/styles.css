@@ -19,9 +19,9 @@ h1, h2, h3, h4{color: #000}
 /*btn*/
 .btn{height: 40px; border-radius: 20px; font-size: 18px; text-decoration: none; transition:.5s;}
 .btn-border{background: #fff; color: #ff0066; border:1px solid #ff0066;}
-.btn-border:hover{background: #ff0066; color: #fff;}
-.btn-solid{background: #ff0066; color: #fff; text-transform:uppercase;}
-.btn-solid:hover{background: #fff; color: #ff0066;}
+.btn-border:hover{background: #ff0066; color: #fff; border-color:#fff}
+.btn-solid{background: #ff0066; color: #fff; text-transform:uppercase; }
+.btn-solid:hover{background: #fff; color: #ff0066; }
 
 
 /*heager*/
@@ -75,13 +75,13 @@ header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;
 #top-pages1 .block .description{padding: 20px; position: absolute; background: #ff0066; color:#fff; left: 50%; opacity1: 0}
 #top-pages1 .block .description p{ height: 160px; overflow: hidden;}
 #top-pages1 .block .description .btn{padding: 5px 50px;}
-#top-pages1 .block:hover .title{background: #ff0066; 
+#top-pages1 .block:hover .title{ 
   -moz-transform: translateX(-100%); 
   -ms-transform: translateX(-100%);
   -webkit-transform: translateX(-100%); 
   -o-transform: translateX(-100%);
   transform:translateX(-100%);}
-#top-pages1 .block:hover h2, #top-pages1 .block:hover p{ color: #fff;}
+/*#top-pages1 .block:hover h2, #top-pages1 .block:hover p{ color: #fff;}*/
 #top-pages1 .block:hover .description{  opacity: 1}
 
 

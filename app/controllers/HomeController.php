@@ -44,9 +44,19 @@ class HomeController extends BaseController {
             $galleries = Gallery::where('post_id', $row->id)->get();
         }
 
+        else if($type_post->template=='page_collect'){
+            $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'asc')->get();
+            // var_dump($posts[0]->gallery);die();
+            // foreach ($posts as $key => $value) {
+            //     # code...
+            // }
+            // $galleries = Gallery::where('post_id', $row->id)->get();
+        }
+
         else{
             
             $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->get();
+            
             $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '!=',0)->orderBy('created_at', 'desc')->get();
 
             if($type_post->template=='news'){

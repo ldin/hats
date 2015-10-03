@@ -82,7 +82,6 @@
                             @endif
 
                             {{$post->preview}}
-                            <?php //var_dump('<pre>',$post) ?>
                             <br>
                             <p>{{ HTML::link($type->type.'/'.$post->slug, 'подробнее >>') }}</p>
 

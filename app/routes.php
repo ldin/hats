@@ -11,28 +11,25 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-Route::get('/x2', function()
-{
-	return View::make('hello-x2');
-});
-// Route::get('/', 'HomeController@showWelcome');
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
 
-// Route::controller('auth', 'AuthController');
-// Route::controller('password', 'RemindersController');
+Route::get('/', 'HomeController@showWelcome');
 
-// Route::controller('admin', 'AdminController');
+Route::controller('auth', 'AuthController');
+Route::controller('password', 'RemindersController');
 
-// Route::post('/form-request', 'HomeController@postFormRequest');
+Route::controller('admin', 'AdminController');
 
-// //all
+Route::post('/form-request', 'HomeController@postFormRequest');
 
-// Route::post('/connect', 'HomeController@postConnect');
-// Route::get('/ajax/{slug?}', 'HomeController@getAjax');
-// Route::get('/search/autocomplete/{type}/{id?}', 'HomeController@autocomplete');
+//all
 
-// Route::get('/rate/{slug?}', 'HomeController@getRate');
-// Route::get('/{type}/{slug?}', 'HomeController@getPage');
+Route::post('/connect', 'HomeController@postConnect');
+Route::get('/ajax/{slug?}', 'HomeController@getAjax');
+Route::get('/search/autocomplete/{type}/{id?}', 'HomeController@autocomplete');
+
+Route::get('/rate/{slug?}', 'HomeController@getRate');
+Route::get('/{type}/{slug?}', 'HomeController@getPage');

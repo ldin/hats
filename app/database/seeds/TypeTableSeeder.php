@@ -6,13 +6,11 @@ class TypeTableSeeder extends Seeder {
   {
     DB::table('types')->delete();
     DB::table('types')->insert(array(
-      array( 'type' => 'page', 'name'=>'Страница', 'status'=>'0', ),
-      array( 'type' => 'about', 'name'=>'О компании', 'status'=>'1', ),
-      array( 'type' => 'uslugi', 'name'=>'Услуги', 'status'=>'1', ),
-      array( 'type' => 'ivest', 'name'=>'Инвестиции', 'status'=>'1', ),
-      array( 'type' => 'partners', 'name'=>'Партнеры', 'status'=>'1', ),
-      array( 'type' => 'news', 'name'=>'Новости', 'status'=>'1', ),
-      array( 'type' => 'contacts', 'name'=>'Контакты', 'status'=>'1', ),      
+      array( 'type' => 'page', 'name'=>'Страница', 'status'=>'0', 'template'=>'page' ),
+      array( 'type' => 'about', 'name'=>'Женская Коллекция', 'status'=>'1', 'template'=>'page'),
+      array( 'type' => 'uslugi', 'name'=>'Детский ассортимент', 'status'=>'1', 'template'=>'page'),
+      array( 'type' => 'ivest', 'name'=>'Советы', 'status'=>'1', 'template'=>'page'),
+      array( 'type' => 'partners', 'name'=>'Нашим клиентам', 'status'=>'1', 'template'=>'page'),
     ));
 
   }

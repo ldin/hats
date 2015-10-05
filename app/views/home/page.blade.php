@@ -25,41 +25,8 @@
 
     <div class="row row-content">
 
-        @if(isset($posts)&&count($posts)>0)
-            <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
-                <ul class="menu-page nav nav-pills nav-stacked ">
-                    @foreach($posts as $post)
-                        <li {{ (Request::is( $type->type.'/'.$post->slug)) || (!empty($row)&&$row->parent==$post->id)? 'class="active"' : '' }} >
-                        {{ HTML::link('/'.$type->type.'/'.$post->slug, $post->name) }}
-                            
-                            @if(isset($posts_child)&&count($posts_child)>0)
-                                <ul>
-                                    @foreach($posts_child as $post_ch)
-                                        @if(($post_ch->parent == $post->id) )
-                                            <li {{ (Request::is( $type->type.'/'.$post_ch->slug)) ? 'class="active"' : '' }}>
-                                                {{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-
-
-
-            </div>
-
-
-            <div class="col-xs-12 col-sm-9">
-
-        @elseif(!isset($posts)||count($posts)==0)
-
-            <div class="col-xs-12">
-
-        @endif
 
 
             @if(!empty($type->text) && empty($row))
@@ -68,14 +35,16 @@
 
             @if(isset($posts)&&count($posts)>0)
                
-                @if(!empty($row->text))
-                    {{ $row->text }}
-                @endif
+                @foreach($posts as $post)
 
-            @else
-                @if(!empty($row->text))
-                    {{ $row->text }}
-                @endif
+                    <div id="parts-{{$post->id}}" class="hidden-parts">{{ $post->text }}</div>
+    <!--                         <div class="col-xs-2 ">
+                                <p class="open-icon"><a href="#" class="img-circle circle" onclick="diplay_hide('#parts-{{$post->id}}', this);return false;"><i class="glyphicon glyphicon-menu-down"></i></a></p>
+                            </div> -->
+                    <hr>
+
+                @endforeach               
+
             @endif
         </div>
 

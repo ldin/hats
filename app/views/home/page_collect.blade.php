@@ -20,10 +20,10 @@
                     <div id="brend-line">
                         <div class="container">
                             <ul>
-                                <li><a href="#tavitta"><img alt="tavitta" src="/upload/image/collectt_ico_1.png" /></a></li>
-                                <li><a href="#gerda"><img alt="gerda" src="/upload/image/collectt_ico_2.png" /></a></li>
-                                <li><a href="#estro"><img alt="estro" src="/upload/image/collectt_ico_3.png" /></a></li>
-                                <li><a href="#swarovski"><img alt="swarovski" src="/upload/image/collectt_ico_4.png" /></a></li>
+                                <li><a href="#tavitta"><img alt="tavitta" src="/img/collect/collectt_ico_1.png" /></a></li>
+                                <li><a href="#gerda"><img alt="gerda" src="/img/collect/collectt_ico_2.png" /></a></li>
+                                <li><a href="#estro"><img alt="estro" src="/img/collect/collectt_ico_3.png" /></a></li>
+                                <li><a href="#swarovski"><img alt="swarovski" src="/img/collect/collectt_ico_4.png" /></a></li>
                             </ul>
                         </div>
                     </div>

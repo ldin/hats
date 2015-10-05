@@ -21,7 +21,7 @@ h1, h2, h3, h4{color: #000}
 hr.style{margin: 0; padding: 0; height: 38px; background: url('../img/bg_tricots-blue.png'); }
 
 /*btn*/
-.btn{height: 40px; border-radius: 20px; padding:5px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
+.btn{height: 40px; border-radius: 20px; padding:7px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
 .btn-border{background: #fff; color: #ff0066; border:1px solid #ff0066;}
 .btn-border:hover{background: #ff0066; color: #fff; border-color:#fff}
 .btn-solid{background: #ff0066; color: #fff; text-transform:uppercase; }
@@ -33,17 +33,20 @@ header .main-logo{margin-bottom: -50px; margin-top:15px;}
 header .block-contact{margin-top: 20px; float: right;}
 header a{color: #000; }
 header .block-contact p span{display: inline-block; width: 150px;}
+header .nav{margin-top: 10px;}
 header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;}
+header .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
 .picto {display: inline-block; margin-right: 10px; width: 26px; height: 26px; vertical-align: middle; }
 .picto-phone{background-image: url('../img/icon/picto-phone.png');}
 .picto-mail{background-image: url('../img/icon/picto-mail.png');}
 
 /*slider*/
-#slider{color: #fff;}
+#slider{}
 #slider p{font-size: 18px;}
-#slider {  background: url('../img/slider/top-image01.jpg') no-repeat; background-size: cover; }
-#slider .left-block{background-color: rgba(0, 0, 0, 0.3); padding: 160px 30px;}
-#slider .left-block .title{ font-size: 44px; line-height: 34px; height: 100%;}
+#slider {  background: url('../img/bg/bg-50perc.jpg') no-repeat; background-size: cover; }
+#slider .left-block{padding: 120px 30px;}
+#slider .left-block .title{ font-size: 40px; line-height: 34px; height: 100%;}
+#slider .left-block .title span{color:#ff0066; }
 #slider .right-block{padding-top: 120px}
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin: 0 2px; padding: 4px 0;}
 #slider .right-block .slide{padding: 0 2px;}

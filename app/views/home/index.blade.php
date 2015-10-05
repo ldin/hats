@@ -13,15 +13,15 @@
             <div class="row head-slide">
                 <div class="col-sm-4 col-xs-12 left-block">
                     <p class="title">
-                        Готовимся к сезону:
+                        <span>Осень\Зима 2015</span>
                     </p>
                     <p class="title">
-                        <small>осень\зима 2015</small>  
+                        ТЕПЛО, УЮТ И ЭСТЕТИЧЕСКОЕ СОВЕРШЕНСТВО  
                     </p>
-                    <p class="text-center">
-                        Что нового в этом году?
+                    <p>
+                        трикотажных головных уборов для женщин и детей
                     </p>
-                    <div class="text-center">
+                    <div>
                         <a href="#" class="btn btn-solid">Заказать каталог</a>
                     </div>                  
                 </div>
@@ -230,7 +230,7 @@
                 </div>
             </div> <!-- /.row -->
             <div class="row text-center">
-                <a href="#" class="btn btn-border">Все новости</a>
+                <a href="#" class="btn btn-border">Все советы</a>
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#advice -->

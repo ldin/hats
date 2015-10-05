@@ -198,7 +198,7 @@
                     </div>
                 </div>
             </div> <!-- /.row -->
-            <div class="row text-center">
+            <div class="row text-center block-btn">
                 <a href="#" class="btn btn-border">Все новости</a>
             </div> <!-- /.row -->
         </div>
@@ -206,31 +206,61 @@
 
     <section id="advice">
         <div class="container">
-            <h2 class="text-center">Советы нашим клиентам</h2>
+            <h2 class="text-center">Информация для клиентов</h2>
             <div class="row">
                 <div class="col-xs-6 col-sm-3 block">
-                    <p>
-                        <em>Информация по уходу</em> за изделиями для покупателей
-                    </p>
+                    <div class="block-hover">
+                        <div class="title">
+                            <p>
+                                <em>Информация для покупателей по уходу</em> за   головными уборами марки   «TAVITTA» и «TAVITTA kids»
+                            </p>
+                        </div>
+                        <div class="description">
+                            <p>Пользуйтесь рекомендациями по уходу за вязаными изделиями  ТМ «TAVITTA» и ТМ «TAVITTA kids»</p>
+                            <p>
+                                <em>- Стирка</em><br>
+                                <em>- Полоскание</em><br>
+                                <em>- Сушка</em><br>
+                                <em>- Особенности декора</em><br>
+                                <em>- Что не рекомендуется делать</em>
+                            </p>
+                            <a href="#" class="btn btn-solid">подробнее</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 block">
-                    <p>
-                        Текст, <em>ключевое слово</em>, и дальнейшая формулировка вопроса?
-                    </p>
+                    <div class="block-hover">
+                        <div class="title">
+                            <p>
+                                Текст, <em>ключевое слово</em>, и дальнейшая формулировка вопроса?
+                            </p>
+                        </div>
+                        <div class="description"></div>
+                    </div>    
                 </div>
                 <div class="col-xs-6 col-sm-3 block">
-                    <p>
-                        Как стать нашим партнером и <em>заказать каталог</em>?
-                    </p>
+                    <div class="block-hover">
+                        <div class="title">
+                            <p>
+                                Как стать нашим партнером и <em>заказать каталог</em>?
+                            </p>
+                        </div>
+                        <div class="description"></div> 
+                    </div>       
                 </div>
                 <div class="col-xs-6 col-sm-3 block">
-                    <p>
-                        Как <em>сделать заказ</em> на оптовую закупку из наших коллекций?
-                    </p>
+                    <div class="block-hover">
+                        <div class="title">
+                            <p>
+                                Как <em>сделать заказ</em> на оптовую закупку из наших коллекций?
+                            </p>
+                        </div>
+                        <div class="description"></div> 
+                    </div>        
                 </div>
             </div> <!-- /.row -->
-            <div class="row text-center">
-                <a href="#" class="btn btn-border">Все советы</a>
+            <div class="row text-center block-btn">
+                <a href="#" class="btn btn-border">Все вопросы</a>
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#advice -->

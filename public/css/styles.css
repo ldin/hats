@@ -5,8 +5,8 @@ body{font-size: 16px;}
 /*footer { position: absolute; bottom: 0; min-height: 400px; width: 100%;}*/
 
 html, body{height: 100%;}
-.wrapper{min-height: 100%; padding-bottom: 150px;}
-footer{height: 150px;  margin-top: -150px;}
+.wrapper{min-height: 100%; padding-bottom: 410px;}
+footer{height: 410px;  margin-top: -410px;}
 
 .left{float: left;}
 .right{float: right;}
@@ -19,13 +19,15 @@ footer{height: 150px;  margin-top: -150px;}
 /*p*/
 h1, h2, h3, h4{color: #000}
 hr.style{margin: 0; padding: 0; height: 22px; background: url('../img/bg_tricots-blue.png'); }
+a{color: #ff0066;}
+a:hover{color: #8e3d5e; text-decoration: none;}
 
 /*btn*/
 .btn{height: 40px; border-radius: 20px; padding:7px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
 .btn-border{background: #fff; color: #ff0066; border:1px solid #ff0066;}
 .btn-border:hover{background: #ff0066; color: #fff; border-color:#fff}
 .btn-solid{background: #ff0066; color: #fff; text-transform:uppercase; }
-.btn-solid:hover{background: #fff; color: #ff0066; }
+.btn-solid:hover{background: #fff; color: #ff0066; border: 1px solid #ff0066 }
 
 
 /*heager*/
@@ -47,7 +49,7 @@ header .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
 #slider .left-block{padding: 120px 30px;}
 #slider .left-block .title{ font-size: 40px; line-height: 34px; height: 100%;}
 #slider .left-block .title span{color:#ff0066; }
-#slider .right-block{padding-top: 120px}
+#slider .right-block{padding-top: 120px; color: #fff;}
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin: 0 2px; padding: 4px 0;}
 #slider .right-block .slide{padding: 0 2px;}
 #slider .right-block .slide p{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3); }
@@ -142,7 +144,16 @@ border-radius: 10px;
 #advice .block p{background-color: #edf2f9; height: 250px; padding: 30px;}
 
 /*footer*/
-footer {background: #ff0066; color: #fff; padding-bottom: 40px;}
+footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding: 40px 0;}
+footer .left-block{ margin-top: 50px;}
+footer .left-block img{max-width: 100%;}
+footer .form-group{margin-bottom: 8px;}
+footer input, textarea{border:1px solid #ff0066; width: 100%; padding-left: 5px;}
+footer .input-block{padding: 0 4px;}
+footer .linegray{background-color:#edf2f9; padding: 15px 0; }
+footer .linegray .menu-item{padding-left: 20px}
+
+
 
 /*pages*/
 

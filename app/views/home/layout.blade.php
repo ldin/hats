@@ -74,10 +74,79 @@
 
     
     <footer>
-    <hr class="style">
-        <div class="container">
-            <div class="row">
-                <p>Footer</p>
+        <hr class="style">
+        <div class="linegray">
+            <div class="container text-center">
+                @if(isset($type_page))
+                    @foreach($type_page as$type=>$page)
+                        {{HTML::link($type, $page, array('class'=>'menu-item'))}}
+                    @endforeach
+                @endif                
+            </div>
+        </div>
+        <div class="footer-bg">
+            <div class="container">
+                <div class="row">
+                    <div class='col-xs-12 col-sm-6 left-block'>
+                        <div class='col-xs-12 col-md-6 main-logo'>
+                            <a href="/">
+                                <img src="img/logo_arin.png">
+                            </a>
+                        </div>
+                        <div class='col-xs-12 col-md-6'>
+                            <p>Поставки лучших головных уборов из качественных экологических
+                            материалов по ценам произвоодителей</p>
+                        </div>
+                    </div>
+                    <div class='col-xs-12 col-sm-6'>
+                        <p>Что бы заказать каталоги или задать вопрос,<br> <b>заполните форму</b></p>
+                        <form method="POST" action="/form-request"  role="form">
+                            <div class="row">
+                                <div class="col-xs-5 input-block">
+                                    <div class="form-group">
+                                        <label for="inputName" class="sr-only">Имя</label>
+                                        <input type="text" name="name" class="" id="inputName" placeholder="Ваше имя">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputPhohe" class="sr-only">Телефон</label>
+                                        <input type="phone" name="phone" class="" id="inputPhohe" placeholder="Ваш телефон">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputEmail" class="sr-only">Email</label>
+                                        <input type="email" name="email" class="" id="inputEmail" placeholder="Ваш e-mail">
+                                      </div>
+                                      
+                                </div>
+                                <div class="col-xs-7 input-block">
+                                      <div class="form-group">
+                                        <label for="inputQuestion" class="sr-only">Ваше обращение</label>
+                                        <textarea name="text" class="" id="inputQuestion" placeholder="Ваш вопрос" rows='4'></textarea>
+                                      </div>     
+
+                                </div>
+
+                            </div>
+                            <div class="row text-right">
+                                <button type="submit" class="btn btn-solid">Отправить</button>
+                            </div>
+                        </form>                    
+                    </div>
+                </div>
+            </div> <!-- /.container -->
+        </div>    
+        <div class="linegray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <p>2015 Arin-shapeau</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="tel:+74951237654">Тел: 8(495) 1237654</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="mailto:arin@hapeau.mail">mail: arin@hapeau.mail</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

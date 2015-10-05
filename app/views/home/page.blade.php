@@ -1,7 +1,7 @@
 @extends('home.layout')
 
 @section('title')
-    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'') }}
+    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'Arin') }}
 @stop
 
 @section('content')

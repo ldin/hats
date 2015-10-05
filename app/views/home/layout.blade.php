@@ -141,10 +141,10 @@
                         <p>2015 Arin-shapeau</p>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p><a href="tel:+74951237654">Тел: 8(495) 1237654</p>
+                        <p>Тел:<a href="tel:+74951237654"> 8(495) 1237654</a></p>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p><a href="mailto:arin@hapeau.mail">mail: arin@hapeau.mail</a></p>
+                        <p>mail:<a href="mailto:arin@hapeau.mail"> arin@hapeau.mail</a></p>
                     </div>
                 </div>
             </div>

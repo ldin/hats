@@ -98,7 +98,7 @@ border-radius: 10px;
 #top-pages{padding-bottom: 30px;}
 #top-pages .block-btn{margin-top: 40px;}
 #top-pages .block{ margin-bottom: 20px; border:6px solid #edf2f9; border-radius: 5px; min-height: 250px; overflow: hidden; position: relative; }
-#top-pages .block .part{height: 250px;  padding: 0; transition:  1s;}
+#top-pages .block .part{height: 250px;  padding: 0; transition:  1.5s;}
 #top-pages .block .title{position: absolute; padding: 20px; background: #f5f5f5; }
 #top-pages .block .title:before{
   content: ''; position: absolute; left: -20px; top: 40px;

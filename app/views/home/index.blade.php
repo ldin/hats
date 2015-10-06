@@ -287,8 +287,8 @@
             // Declare parallax on layers
             jQuery('.parallax-layer').parallax(
                 { mouseport: jQuery("#slider") },            // Options
-                { xparallax: '10px',    yparallax: '10px' },      // Layer 1
-                { xparallax: '50px',   yparallax: '50px' }     // Layer 2
+                { xparallax: '20px',    yparallax: '20px', xorigin:0, yorigin:0, frameDuration:1 },      // Layer 1
+                { xparallax: '100px',   yparallax: '100px', xorigin:0, yorigin:0, frameDuration:1}     // Layer 2
             );
         });
     </script>

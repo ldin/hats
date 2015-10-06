@@ -110,6 +110,14 @@
             </div> <!-- /.row -->
             
         </div>
+
+        <div id="snowflake">
+            <img src="/img/bg/snow-test1.png" class="parallax-layer">
+            <img src="/img/bg/snow-test2.png" class="parallax-layer">        
+<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer">
+            <img src="/img/bg/snow-test2-tst.png" class="parallax-layer"> -->
+        </div>
+
     </section> <!-- /#slider -->
 
     <hr class="style">
@@ -269,5 +277,16 @@
 @stop
 
 @section('scripts')
-
+    <script src="/js/jquery.parallax.js"></script>
+    <script type="text/javascript">
+    
+        jQuery(document).ready(function(){
+            // Declare parallax on layers
+            jQuery('.parallax-layer').parallax(
+                { mouseport: jQuery("#snowflake") },            // Options
+                { xparallax: '10px',    yparallax: '10px' },      // Layer 1
+                { xparallax: '50px',   yparallax: '50px' }     // Layer 2
+            );
+        });
+    </script>
 @stop

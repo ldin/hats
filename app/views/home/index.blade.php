@@ -9,7 +9,15 @@
 @section('content')
 
     <section id="slider">
-        <div class="container">
+
+        <div id="snowflake">
+            <img src="/img/bg/snow-test1.png" class="parallax-layer">
+            <img src="/img/bg/snow-test2.png" class="parallax-layer">        
+<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer">
+            <img src="/img/bg/snow-test2-tst.png" class="parallax-layer"> -->
+        </div>
+
+        <div class="container text-slide-block">
             <div class="row head-slide">
                 <div class="col-sm-4 col-xs-12 left-block">
                     <p class="title">
@@ -111,12 +119,7 @@
             
         </div>
 
-        <div id="snowflake">
-            <img src="/img/bg/snow-test1.png" class="parallax-layer">
-            <img src="/img/bg/snow-test2.png" class="parallax-layer">        
-<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer">
-            <img src="/img/bg/snow-test2-tst.png" class="parallax-layer"> -->
-        </div>
+
 
     </section> <!-- /#slider -->
 
@@ -283,7 +286,7 @@
         jQuery(document).ready(function(){
             // Declare parallax on layers
             jQuery('.parallax-layer').parallax(
-                { mouseport: jQuery("#snowflake") },            // Options
+                { mouseport: jQuery("#slider") },            // Options
                 { xparallax: '10px',    yparallax: '10px' },      // Layer 1
                 { xparallax: '50px',   yparallax: '50px' }     // Layer 2
             );

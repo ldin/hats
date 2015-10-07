@@ -15,9 +15,11 @@
             @if(isset($posts)&&count($posts)>0)
 
                 @if(!empty($row->text))
-                    {{ $row->text }}
+                    <div class="container">
+                        {{ $row->text }}
+                    </div>    
                 @else
-                    <div id="brend-line">
+<!--                     <div id="brend-line">
                         <div class="container">
                             <ul>
                                 <li><a href="#tavitta"><img alt="tavitta" src="/img/collect/collectt_ico_1.png" /></a></li>
@@ -37,7 +39,7 @@
                             </div>
                         </div>
                         <hr>
-                    </div>
+                    </div> -->
                 @endif
                 @foreach($posts as $post)
                     <!-- текст поста -->

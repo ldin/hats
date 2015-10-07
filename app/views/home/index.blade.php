@@ -10,10 +10,10 @@
 
     <section id="slider">
 
-        <div id="snowflake">
-            <img src="/img/bg/snow-test1.png" class="parallax-layer">
-            <img src="/img/bg/snow-test2.png" class="parallax-layer">        
-<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer">
+        <div id="snowflake" class="text-center">
+            <img src="/img/bg/snow-1.png" class="parallax-layer" >
+            <img src="/img/bg/snow-2.png" class="parallax-layer">        
+<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer" >
             <img src="/img/bg/snow-test2-tst.png" class="parallax-layer"> -->
         </div>
 
@@ -34,85 +34,46 @@
                     </div>                  
                 </div>
                 <div class="col-sm-8 col-xs-12 right-block" >
-                    <div class="block">
-                        <div class=" text-center">
+                    <div class="block row">
+                        <div class=" text-center col-xs-12">
                             <p class="top-line">Вспоминаем модели прошлых сезонов</p>
                         </div>
-                        <div class="">
-                            <!--                                
-                            <div class="col-xs-4 slide">
-                                    <img src="img/slider/top-face1.jpg" alt="">
-                                    <p>TAVITTA - 2013</p>
+                        <div class="col-xs-12">
+                            <div id="carusel" class="scroll-img">
+                                <ul>
+                                    <li>
+                                            <img src="img/slider/top-face1.jpg" alt="">
+                                            <p class="title">TAVITTA - 2013</p>
+                                    </li>
+                                    <li>
+                                            <img src="img/slider/top-face2.jpg" alt="">
+                                            <p class="title">Brend2 - 2013</p>
+                                    </li>  
+                                    <li>
+                                            <img src="img/slider/top-face3.jpg" alt="">
+                                            <p class="title">TAVITTA - 2013</p>
+                                    </li> 
+                                    <li>
+                                            <img src="img/slider/top-face2.jpg" alt="">
+                                            <p class="title">Brend2 - 2013</p>
+                                    </li>
+                                    <li>
+                                            <img src="img/slider/top-face1.jpg" alt="">
+                                            <p class="title">TAVITTA - 2013</p>
+                                    </li>
+                                    <li>
+                                            <img src="img/slider/top-face3.jpg" alt="">
+                                            <p class="title">TAVITTA - 2013</p>
+                                    </li> 
+                                </ul>        
                             </div>
-                            <div class="col-xs-4 slide">
-                                    <img src="img/slider/top-face2.jpg" alt="">
-                                    <p>Brend2 - 2013</p>
-                            </div>  
-                            <div class="col-xs-4 slide">
-                                    <img src="img/slider/top-face3.jpg" alt="">
-                                    <p>TAVITTA - 2013</p>
-                            </div> -->  
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <!-- <img src="..." alt="..."> -->
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face1.jpg" alt="">
-                            <p>TAVITTA - 2013</p>
-                    </div>
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face2.jpg" alt="">
-                            <p>Brend2 - 2013</p>
-                    </div>  
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face3.jpg" alt="">
-                            <p>TAVITTA - 2013</p>
-                    </div>      
-              <div class="carousel-caption">
-                ...
-              </div>
-            </div>
-            <div class="item">
-              <!-- <img src="..." alt="..."> -->
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face2.jpg" alt="">
-                            <p>TAVITTA - 2013</p>
-                    </div>
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face3.jpg" alt="">
-                            <p>Brend2 - 2013</p>
-                    </div>  
-                    <div class="col-xs-4 slide">
-                            <img src="img/slider/top-face1.jpg" alt="">
-                            <p>TAVITTA - 2013</p>
-                    </div>      
-              <div class="carousel-caption">
-                ...
-              </div>
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-                        </div>
+                        </div>    
+<!--                         <div class='col-xs-12'>
+                            <div id="carusel-btn" class="text-center">
+                              <button class="btn" id="carusel-backward"><i class="icon-chevron-left"></i> < </button>
+                              <button class="btn" id="carusel-forward"> > <i class="icon-chevron-right"></i></button>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div> <!-- /.row -->
@@ -281,15 +242,34 @@
 
 @section('scripts')
     <script src="/js/jquery.parallax.js"></script>
+    <script src="/js/jquery.scrollbox.min.js"></script>
     <script type="text/javascript">
     
         jQuery(document).ready(function(){
+            //parallax
             // Declare parallax on layers
             jQuery('.parallax-layer').parallax(
                 { mouseport: jQuery("#slider") },            // Options
-                { xparallax: '20px',    yparallax: '20px', xorigin:0, yorigin:0, frameDuration:1 },      // Layer 1
-                { xparallax: '100px',   yparallax: '100px', xorigin:0, yorigin:0, frameDuration:1}     // Layer 2
+                { xparallax: '20px',    yparallax: '20px', xorigin:0.5, yorigin:0, frameDuration:1 },      // Layer 1
+                { xparallax: '100px',   yparallax: '100px', xorigin:0.5, yorigin:0, frameDuration:1}     // Layer 2
             );
+
+            //scrollbox
+            $('#carusel').scrollbox({
+              direction: 'h',
+              distance: 220
+            });
+            $('#carusel-backward').click(function () {
+              $('#demo5').trigger('backward');
+            });
+            $('#carusel-forward').click(function () {
+              $('#demo5').trigger('forward');
+            });
+
+
         });
+
     </script>
+    
+
 @stop

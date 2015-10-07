@@ -11,6 +11,8 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/styles.css?0001" rel="stylesheet">
 
+  <!-- <link href="http://allfont.ru/allfont.css?fonts=birchctt" rel="stylesheet" type="text/css" /> -->
+
     @yield('header')
 
  </head>
@@ -28,24 +30,24 @@
                     <div class="col-sm-7 col-xs-12 ">
                         <div class="row">           
                             <div class="block-contact"> 
-                                <p><a href=""><i class="picto picto-mail"></i><span> +9(495)3216547</span></a> </p>
-                                <p><a href=""><i class="picto picto-phone"></i><span> Написать письмо</span></a></p>
+                                <p><a href=""><i class="picto picto-phone"></i><span> +9(495)3216547</span></a> </p>
+                                <p><a href=""><i class="picto picto-mail"></i><span> Написать письмо</span></a></p>
                             </div>
                         </div>
-                        <div class="row">
-                            <nav class="navbar ">
+                        <!-- <div class="row"> -->
+                            <!-- <nav class="navbar "> -->
                                 <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
+<!--                                 <div class="navbar-header">
                                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-menu" aria-expanded="false">
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                   </button>
-                                </div>
+                                </div> -->
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="navbar-main-menu">
+                                <!-- <div class="collapse navbar-collapse" id="navbar-main-menu">
                                   <ul class="nav navbar-nav navbar-right">
                                     @if(isset($type_page))
                                         @foreach($type_page as$type=>$page)
@@ -53,17 +55,46 @@
                                         @endforeach
                                     @endif
                                   </ul>
-                                </div><!-- /.navbar-collapse -->
-                            </nav>                      
-                        </div>
+                                </div> --><!-- /.navbar-collapse -->
+                            <!-- </nav>                       -->
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
             
-        </header>
+        
 
         <hr class="style">
 
+        <div id="main-menu">
+            <div class="container">
+                <nav class="navbar ">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-main-menu">
+                      <ul class="nav navbar-nav">
+                        @if(isset($type_page))
+                            @foreach($type_page as$type=>$page)
+                                <li {{ (Request::is($type.'*')) ? 'class="active"' : '' }}>{{HTML::link($type, $page)}}</li>
+                            @endforeach
+                        @endif
+                      </ul>
+                    </div> <!-- /.navbar-collapse -->
+                </nav> 
+            </div>                     
+        </div>
+
+        </header>
+                        
         <main>
 
             @yield('content')

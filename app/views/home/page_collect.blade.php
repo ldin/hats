@@ -64,7 +64,7 @@
                             </div>
                             <div class="row text-center gallery-contact">
                                 <p>
-                                    <a href="#" >Условия поставки</a>
+                                    <a href="#">Условия поставки</a>
                                     <a href="#" class="btn btn-solid">ЗАКАЗАТЬ КАТАЛОГ</a>
                                 </p>
                             </div>

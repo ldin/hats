@@ -257,7 +257,9 @@
             //scrollbox
             $('#carusel').scrollbox({
               direction: 'h',
-              distance: 220
+              distance: 220,
+              delay:4,
+              linear:true
             });
             $('#carusel-backward').click(function () {
               $('#demo5').trigger('backward');

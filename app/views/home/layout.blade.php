@@ -9,7 +9,7 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/styles.css?0001" rel="stylesheet">
+    <link href="/css/styles.css?0002" rel="stylesheet">
 
   <!-- <link href="http://allfont.ru/allfont.css?fonts=birchctt" rel="stylesheet" type="text/css" /> -->
 

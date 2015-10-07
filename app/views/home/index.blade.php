@@ -30,11 +30,11 @@
                         трикотажных головных уборов для женщин и детей
                     </p>
                     <div>
-                        <a href="#" class="btn btn-solid">Заказать каталог</a>
+                        <a href="#" class="btn btn-solid">ЗАКАЗАТЬ КАТАЛОГ</a>
                     </div>                  
                 </div>
                 <div class="col-sm-8 col-xs-12 right-block" >
-                    <div class="block row">
+                    <div class="block">
                         <div class=" text-center col-xs-12">
                             <p class="top-line">Вспоминаем модели прошлых сезонов</p>
                         </div>
@@ -180,7 +180,7 @@
         <div class="container">
             <h2 class="text-center">Информация для клиентов</h2>
             <div class="row">
-                <div class="col-xs-6 col-sm-3 block">
+                <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
                             <p>
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 block">
+                <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
                             <p>
@@ -210,7 +210,7 @@
                         <div class="description"></div>
                     </div>    
                 </div>
-                <div class="col-xs-6 col-sm-3 block">
+                <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
                             <p>
@@ -220,7 +220,7 @@
                         <div class="description"></div> 
                     </div>       
                 </div>
-                <div class="col-xs-6 col-sm-3 block">
+                <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
                             <p>

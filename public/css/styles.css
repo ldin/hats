@@ -31,13 +31,13 @@ a:hover{color: #8e3d5e; text-decoration: none;}
 .btn{height: 40px; border-radius: 20px; padding:7px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
 .btn-border{background: #fff; color: #ff0066; border:1px solid #ff0066;}
 .btn-border:hover{background: #ff0066; color: #fff; border-color:#fff}
-.btn-solid{background: #ff0066; color: #fff; text-transform:uppercase; }
+.btn-solid{background: #ff0066; color: #fff; }
 .btn-solid:hover{background: #fff; color: #ff0066; border: 1px solid #ff0066 }
 
 
 /*heager*/
 header .main-logo{margin-bottom: -50px; margin-top:15px; z-index: 10;}
-header .block-contact{margin-top: 20px; float: right;}
+header .block-contact{margin-top: 40px; float: right;}
 header a{color: #000; }
 header .block-contact p span{display: inline-block; width: 150px;}
 #main-menu{ background-color: #ecf1f9; ;}
@@ -46,6 +46,10 @@ header .block-contact p span{display: inline-block; width: 150px;}
 #main-menu li{display: table-cell;  border-left: 1px solid;}
 #main-menu li:last-of-type{border-right:1px solid #000;}
 #main-menu .nav>li>a:focus, #main-menu .nav>li>a:hover, #main-menu .nav>li.active>a{background-color: #e1eaee; color: #000;}
+@media (max-width: 768px) {
+  #main-menu li{display: block;}
+  #main-menu li:last-of-type{border-right:0;}
+}
 /*header .nav{margin-top: 10px;}
 header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;}
 header .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
@@ -189,7 +193,7 @@ border-radius: 10px;
 #advice .block .title{background-color: #edf2f9; font-size: 18px;  padding: 30px;}
 #advice .block .description{background:#fff; padding: 5px; font-size: 16px;  top: 0; opacity: 0; transition: 0.5s;}
 #advice .block:hover .description{opacity: 1}
-
+#advice .btn{height: 34px; padding: 3px 40px;}
 
 /*footer*/
 footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding: 40px 0;}

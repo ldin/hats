@@ -8,21 +8,6 @@
 
     <div id="content" class="container">
 
-    <div class="row breadcrumbs">
-        
-        <span class="loc page" data-link="/">Главная </span>
-        @if(!empty($type->name))
-            <span class="loc page" data-link="/{{$type->type}}"> > {{ $type->name }} </span>
-        @endif
-        @if(!empty($row->parent_title))
-            <span class="loc page" data-link="/{{$row->parent_slug}}"> > {{ $row->parent_title }} </span>
-        @endif
-        @if(!empty($row->name))
-            <span class="loc page" data-link="/{{$row->slug}}"> > {{ $row->name }} </span>
-        @endif
-
-    </div>
-
     <div class="row row-content">
 
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">

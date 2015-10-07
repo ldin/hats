@@ -193,7 +193,7 @@ border-radius: 10px;
 #advice .block .title{background-color: #edf2f9; font-size: 18px;  padding: 30px;}
 #advice .block .description{background:#fff; padding: 5px; font-size: 16px;  top: 0; opacity: 0; transition: 0.5s;}
 #advice .block:hover .description{opacity: 1}
-#advice .btn{height: 34px; padding: 3px 40px;}
+#advice .block .btn{height: 34px; padding: 3px 40px;}
 
 /*footer*/
 footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding: 40px 0;}

@@ -65,14 +65,13 @@ header .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
 #slider .left-block{padding: 120px 30px;}
 #slider .left-block .title{ font-size: 40px; line-height: 34px; height: 100%;}
 #slider .left-block .title span{color:#ff0066; }
-#slider .right-block{max-width: 694px; padding-top: 120px; color: #fff;}
+#slider .right-block{max-width: 724px; padding-top: 120px; color: #fff;}
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin-bottom: 0; padding: 4px 0;}
-/*#slider .right-block .slide{padding: 0 2px;}*/
-#slider .right-block .title{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3); }
+#slider .right-block .title{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3);  text-align: center;}
 #slider .right-block img{width: 100%;}
 @media (max-width: 768px) {
   #slider .right-block{padding: 20px 0;} 
-  #slider .left-block .title{ font-size: 33px;}
+  #slider .left-block .title{ font-size: 33px; }
 }
 /*.scroll-img img{max-width: 100%;}*/
 .scroll-img {

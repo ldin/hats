@@ -9,7 +9,9 @@
     <div id="collect">
         
             @if(!empty($type->text) && empty($row))
-                {{ $type->text }}
+                <div class="container">
+                    {{ $type->text }}
+                </div>        
             @endif
 
             @if(isset($posts)&&count($posts)>0)

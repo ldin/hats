@@ -175,7 +175,9 @@
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#top-pages -->
-
+        <div class="text-center">
+            <a href="#top-site" class="totop"></a>
+        </div>
     <section id="advice">
         <div class="container">
             <h2 class="text-center">Информация для клиентов</h2>
@@ -259,14 +261,15 @@
               direction: 'h',
               distance: 220,
               delay:4,
+              speed: 20,
               linear:true
             });
-            $('#carusel-backward').click(function () {
-              $('#demo5').trigger('backward');
-            });
-            $('#carusel-forward').click(function () {
-              $('#demo5').trigger('forward');
-            });
+            // $('#carusel-backward').click(function () {
+            //   $('#demo5').trigger('backward');
+            // });
+            // $('#carusel-forward').click(function () {
+            //   $('#demo5').trigger('forward');
+            // });
 
 
         });

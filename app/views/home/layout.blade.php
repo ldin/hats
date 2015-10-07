@@ -19,7 +19,7 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <header id="top-site">
             <div class="container top-block">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-2 main-logo">
@@ -34,30 +34,6 @@
                                 <p><a href=""><i class="picto picto-mail"></i><span> Написать письмо</span></a></p>
                             </div>
                         </div>
-                        <!-- <div class="row"> -->
-                            <!-- <nav class="navbar "> -->
-                                <!-- Brand and toggle get grouped for better mobile display -->
-<!--                                 <div class="navbar-header">
-                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-menu" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                  </button>
-                                </div> -->
-
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <!-- <div class="collapse navbar-collapse" id="navbar-main-menu">
-                                  <ul class="nav navbar-nav navbar-right">
-                                    @if(isset($type_page))
-                                        @foreach($type_page as$type=>$page)
-                                            <li {{ (Request::is($type.'*')) ? 'class="active"' : '' }}>{{HTML::link($type, $page)}}</li>
-                                        @endforeach
-                                    @endif
-                                  </ul>
-                                </div> --><!-- /.navbar-collapse -->
-                            <!-- </nav>                       -->
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -103,8 +79,11 @@
 
     </div>
 
-    
+
     <footer>
+        <div class="text-center">
+            <a href="#top-site" class="totop"></a>
+        </div>
         <hr class="style">
         <div class="linegray">
             <div class="container text-center">

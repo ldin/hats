@@ -1,40 +1,91 @@
 @extends('home.layout')
 
 @section('title')
-    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'Arin') }}
+    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'') }}
 @stop
 
 @section('content')
 
     <div id="content" class="container">
 
-    <div class="row row-content">
+    <div class="row">
 
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        @if(isset($posts)&&count($posts)>0)
+            <div class="col-xs-12 col-sm-3">
+
+                <ul class="menu-page nav nav-pills nav-stacked ">
+                    @foreach($posts as $post)
+                        <li {{ (Request::is( $type->type.'/'.$post->slug)) || (!empty($row)&&$row->parent==$post->id)? 'class="active"' : '' }} >
+                        {{ HTML::link('/'.$type->type.'/'.$post->slug, $post->name) }}
+                            
+                            @if(isset($posts_child)&&count($posts_child)>0)
+                                <ul>
+                                    @foreach($posts_child as $post_ch)
+                                        @if(($post_ch->parent == $post->id) )
+                                            <li {{ (Request::is( $type->type.'/'.$post_ch->slug)) ? 'class="active"' : '' }}>
+                                                {{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </li>
+                    @endforeach
+                </ul>
 
 
 
-            @if(!empty($type->text) && empty($row))
-                {{ $type->text }}
+            </div>
+        @endif
+
+        <div class="col-xs-12 col-sm-9">
+
+            @if(!empty($row->text))
+                {{ $row->text }}
             @endif
 
-            @if(isset($posts)&&count($posts)>0)
-               
-                @foreach($posts as $post)
+            @if(empty($row))
+                {{ $type->text }}
+            @endif
+            
+            @if(isset($subcategory)&&count($subcategory)>0)
+                @foreach($subcategory as $post)
 
-                    <div id="parts-{{$post->id}}" class="hidden-parts">{{ $post->text }}</div>
-    <!--                         <div class="col-xs-2 ">
-                                <p class="open-icon"><a href="#" class="img-circle circle" onclick="diplay_hide('#parts-{{$post->id}}', this);return false;"><i class="glyphicon glyphicon-menu-down"></i></a></p>
-                            </div> -->
+
+                    <?php $parts = preg_split('/<div style="page-break-after: always"><span style="display:none">&nbsp;<\/span><\/div>/', $post->text); ?>
+
+                    <div class="block-post row block-news">
+
+                        <div class="col-xs-9 ">
+                            <p>{{$post->name}}</p>
+                            @if(!empty($post->preview_img))
+                                {{ HTML::image($post->preview_img, '') }}
+                            @endif
+
+                            {{$post->preview}}
+                            <br>
+                            <p>{{ HTML::link($type->type.'/'.$post->slug, 'подробнее >>') }}</p>
+
+                        </div>
+                        <div class="col-xs-3 ">
+                            <p class="data-post">{{ date( 'd.m.Y', strtotime($post->created_at)); }}</p>
+                            @if(count($parts)>1)
+                                <p><a href="#" class="img-circle circle" onclick="diplay_hide('#parts-{{$post->id}}', this);return false;"><i class="glyphicon glyphicon-menu-down"></i></a></p>
+                            @endif
+                        </div>
+
+                    </div>
                     <hr>
+                @endforeach
 
-                @endforeach               
+                {{ $subcategory->links() }}
 
             @endif
         </div>
 
-    </div>
 
+
+    </div>
 
     </div>
 

@@ -31,7 +31,7 @@ class HomeController extends BaseController {
     public function getPage($type, $slug=''){
 
         $type_post = Type::where('type', $type)->first();
-        $posts_child = $galleries = $posts = $row = $subcategory = array();
+        $posts_child = $galleries = $posts = $row = array();
 
 
         if(empty($type_post)){
@@ -45,12 +45,21 @@ class HomeController extends BaseController {
         }
 
         else if($type_post->template=='page_collect'){
-            $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'asc')->get();
-            // var_dump($posts[0]->gallery);die();
-            // foreach ($posts as $key => $value) {
-            //     # code...
-            // }
-            // $galleries = Gallery::where('post_id', $row->id)->get();
+            $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('order', 'asc')->get();
+        }
+
+        else if($type_post->template=='news'){
+
+            if($slug==''){
+                $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->paginate(20);
+            }else{
+                $row = Post::where('slug', $slug)->first();            
+            }
+
+            foreach ($posts as $key => $post) {
+                $preview = HomeController::previewFirstSimbol($post->text, 500);
+                $post->preview = $preview['text'];
+            }
         }
 
         else{
@@ -58,21 +67,6 @@ class HomeController extends BaseController {
             $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->get();
             
             $posts_child = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', '!=',0)->orderBy('created_at', 'desc')->get();
-
-            if($type_post->template=='news'){
-                if($slug==''){
-                    $subcategory = Post::where('type_id',$type_post->id)->where('status',1)->where('parent','!=',0)->orderBy('created_at', 'desc')->paginate(15);
-                }else{
-                    $row = Post::where('slug', $slug)->first();            
-                    $subcategory = Post::where('type_id',$type_post->id)->where('status',1)->where('parent', $row->id)->orderBy('created_at', 'desc')->paginate(15);
-                }
-
-                foreach ($subcategory as $key => $post) {
-                    $preview = HomeController::previewFirstSimbol($post->text, 500);
-                    $post->preview = $preview['text'];
-                    $post->preview_img = $preview['img'];
-                }
-            }
 
             if($slug!=''){
                 $row = Post::where('slug',$slug)->first();
@@ -89,7 +83,6 @@ class HomeController extends BaseController {
         $view = array(
             'type'=>$type_post,
             'posts'=>$posts,
-            'subcategory'=>$subcategory,
             'posts_child' => $posts_child,            
             'row' => $row,
             'galleries' => $galleries,

@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-2 main-logo">
                         <a href="/">
-                            <img src="img/logo_arin.png">
+                            <img src="/img/logo_arin.png">
                         </a>
                     </div>
                     <div class="col-sm-7 col-xs-12 ">
@@ -100,7 +100,7 @@
                     <div class='col-xs-12 col-sm-6 left-block'>
                         <div class='col-xs-12 col-md-6 main-logo'>
                             <a href="/">
-                                <img src="img/logo_arin.png">
+                                <img src="/img/logo_arin.png">
                             </a>
                         </div>
                         <div class='col-xs-12 col-md-6'>

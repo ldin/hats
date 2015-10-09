@@ -45,19 +45,17 @@
         </div>
 
         <div class="row">
-        <!--
+
+            <div class="form-group form-inline col-sm-6 col-xs-12">
+                {{ Form::text('order', (isset($row->order)?$row->order:''), array('class' => 'form-control order-select', 'id'=>'selectOrder'))}}
+                {{ Form::label('selectOrder', 'Порядок вывода на сайте') }}
+                <small><p class="info-txt">Для коллекций</p></small>
+
+            </div> 
             <div class="form-group col-sm-6 col-xs-12">
                 <div class="checkbox">
                   <label>
-                    {{ Form::checkbox('noindex', '1', (isset($row->noindex)&&($row->noindex==true)?array('checked'):'') )  }}
-                    Закрыть от индексации роботами
-                  </label>
-                </div>
-            </div> -->
-            <div class="form-group col-sm-6 col-xs-12">
-                <div class="checkbox">
-                  <label>
-                    {{ Form::checkbox('status', '1', (isset($row->status)&&($row->status==true)?array('checked'):'') )  }}
+                    {{ Form::checkbox('status', '1', (isset($row->status)&&($row->status==false)?'':array('checked')) )  }}
                     Показывать на сайте <span class="info-txt">( иначе доступ только из админки)</span>
                   </label>
                 </div>

@@ -4,7 +4,7 @@
 .main-page h1{margin-bottom: 50px;}
 .slide-preview-img img{max-width: 300px;}
 .info-txt{color: #a5a5a5}
-
+.form-inline .order-select{width: 70px;}
 
 /* slider */
 .btn-slide{color: #fff; border: 1px solid #fff; padding: 5px 15px; text-decoration: none; text-align: center;}

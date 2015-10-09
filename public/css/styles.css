@@ -10,8 +10,8 @@ body{font-size: 16px;}
 /*footer { position: absolute; bottom: 0; min-height: 400px; width: 100%;}*/
 
 html, body{height: 100%;}
-.wrapper{min-height: 100%; padding-bottom: 410px;}
-footer{height: 410px;  margin-top: -410px;}
+.wrapper{min-height: 100%; padding-bottom: 390px;}
+footer{height: 390px;  margin-top: -390px;}
 
 .left{float: left;}
 .right{float: right;}
@@ -196,7 +196,7 @@ border-radius: 10px;
 #advice .block .btn{height: 34px; padding: 3px 40px;}
 
 /*footer*/
-footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding: 40px 0;}
+footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding-top: 10px;}
 footer .left-block{ margin-top: 50px;}
 footer .left-block img{max-width: 100%;}
 footer .form-group{margin-bottom: 8px;}
@@ -209,6 +209,8 @@ footer .totop{margin-bottom: -45px;}
 
 /*pages*/
 #port{background-color: #000;}
+.menu-page{margin-top: 50px; background-color: #ecf1f9}
+.menu-page.nav-pills>li.active>a, .menu-page.nav-pills>li.active>a:hover { color: #000; background-color: #e1eaee;}
 
 /*page-collect*/
 #collect .galleries{background:#edf2f9; padding: 30px 0 }
@@ -224,3 +226,14 @@ footer .totop{margin-bottom: -45px;}
 #collect .gallery-image:hover .description{display: block;}
 #collect .gallery-contact{padding-top: 40px; }
 #collect .gallery-contact .btn{margin: 0 5%;}
+
+/*page-news*/
+#content-news{margin-top: 50px;}
+#content-news .share-block{background:#edf2f9; padding: 6px 20px;}
+#content-news .share-block span{color: #7d9ca8;vertical-align: middle; vertical-align: super;}
+#content-news .date{color: #7d9ca8}
+#content-news .title-block{background: #edf2f9; overflow: hidden; margin-bottom: 15px;}
+#content-news .part{height: 250px; margin: 0; }
+#content-news .part-img{padding: 0;}
+#content-news .part img{width: 100%;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {color: #000;background-color: #e1eaee;border-color: #ddd;}

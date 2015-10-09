@@ -1,110 +1,77 @@
 @extends('home.layout')
 
 @section('title')
-    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'') }}
+    {{ !empty($row->title)? $row->title:(!empty($type->title)? $type->title:'Arin') }}
+@stop
+
+@section('header')
 @stop
 
 @section('content')
 
-    <div id="content" class="container">
+    <div id="content-news" class="container">
 
-    <div class="row breadcrumbs">
-        
-        <span class="loc page" data-link="/">Главная </span>
-        @if(!empty($type->name))
-            <span class="loc page" data-link="/{{$type->type}}"> > {{ $type->name }} </span>
-        @endif
-        @if(!empty($row->parent_title))
-            <span class="loc page" data-link="/{{$row->parent_slug}}"> > {{ $row->parent_title }} </span>
-        @endif
-        @if(!empty($row->name))
-            <span class="loc page" data-link="/{{$row->slug}}"> > {{ $row->name }} </span>
-        @endif
+    <div class="row row-content">
 
-    </div>
-
-    <div class="row">
-
-    <?// var_dump($posts); ?>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
 
-
-        @if(isset($posts)&&count($posts)>0)
-            <div class="col-xs-12 col-sm-3">
-
-                <ul class="menu-page nav nav-pills nav-stacked ">
-                    @foreach($posts as $post)
-                        <li {{ (Request::is( $type->type.'/'.$post->slug)) || (!empty($row)&&$row->parent==$post->id)? 'class="active"' : '' }} >
-                        {{ HTML::link('/'.$type->type.'/'.$post->slug, $post->name) }}
-                            
-                            @if(isset($posts_child)&&count($posts_child)>0)
-                                <ul>
-                                    @foreach($posts_child as $post_ch)
-                                        @if(($post_ch->parent == $post->id) )
-                                            <li {{ (Request::is( $type->type.'/'.$post_ch->slug)) ? 'class="active"' : '' }}>
-                                                {{ HTML::link('/'.$type->type.'/'.$post_ch->slug, $post_ch->name) }}
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-
-
-
-            </div>
-        @endif
-
-        <div class="col-xs-12 col-sm-9">
-
-            @if(!empty($row->text))
-                {{ $row->text }}
-            @endif
-
-            @if(empty($row))
+            @if(!empty($type->text) && empty($row))
                 {{ $type->text }}
             @endif
-            
-            @if(isset($subcategory)&&count($subcategory)>0)
-                @foreach($subcategory as $post)
 
+            @if(!empty($row->text))
+                <p class="date">{{ date( 'd.m.Y', strtotime($row->created_at)) }}</p>
+                <h1>{{$row->name}}</h1>
+                {{$row->text}}
+                <br><a href="javascript:history.back(1)" >назад</a>
+                <br><br>
+                <div class="col-xs-12 text-right share-block">
+                <script type="text/javascript">(function() {
+                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                  }})();</script>
+                <span>Поделиться:</span> <div class="pluso" data-background="transparent" data-options="small,square,line,horizontal,nocounter,theme=02" data-services="vkontakte,odnoklassniki,facebook,twitter,google" data-user="1132713077"></div>
+                </div>                
+            @endif
 
-                    <?php $parts = preg_split('/<div style="page-break-after: always"><span style="display:none">&nbsp;<\/span><\/div>/', $post->text); ?>
+            @if(isset($posts)&&count($posts)>0)
+               <?php $k=0; ?>
 
-                    <div class="block-post row block-news">
-
-                        <div class="col-xs-9 ">
-                            <p>{{$post->name}}</p>
-                            @if(!empty($post->preview_img))
-                                {{ HTML::image($post->preview_img, '') }}
-                            @endif
-
-                            {{$post->preview}}
-                            <br>
-                            <p>{{ HTML::link($type->type.'/'.$post->slug, 'подробнее >>') }}</p>
-
+                @foreach($posts as $post)
+                <div class="news-item">
+                    <p class="date">{{ date( 'd.m.Y', strtotime($post->created_at)) }}</p>
+                    <div class=" title-block">
+                        <div class="col-xs-12 col-sm-6 part part-img">
+                            {{ HTML::image($post->image, $post->name) }}
                         </div>
-                        <div class="col-xs-3 ">
-                            <p class="data-post">{{ date( 'd.m.Y', strtotime($post->created_at)); }}</p>
-                            @if(count($parts)>1)
-                                <p><a href="#" class="img-circle circle" onclick="diplay_hide('#parts-{{$post->id}}', this);return false;"><i class="glyphicon glyphicon-menu-down"></i></a></p>
-                            @endif
+                        <div class="col-xs-12 col-sm-6 part part-title">
+                            <h2>{{ $post->name }}</h2>
                         </div>
-
                     </div>
-                    <hr>
+
+                    <div id="parts-{{$post->id}}" class="hidden-parts">{{ $post->preview }}</div>
+                    <div class="text-right">
+                        <p>{{ HTML::link( $type->type.'/'.$post->slug, 'далее' ) }} </p>
+                    </div>
+                </div>    
+                <hr>
+                <?php $k++; if(($k%3)==0 && $k!=(count($posts))){echo('<div class="text-center"><a href="#top-site" class="totop"></a></div>'); }  ?>
+
                 @endforeach
 
-                {{ $subcategory->links() }}
+                {{ $posts->links() }}       
 
             @endif
         </div>
 
-
-
     </div>
+
 
     </div>
 

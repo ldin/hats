@@ -115,6 +115,7 @@ class AdminController extends BaseController {
             $post->text = $all['text'];
             $post->parent = $all['parent'];
             $post->status = isset($all['status'])?true:false;
+            $post->order = $all['order'];
             // $post->noindex = isset($all['noindex'])?true:false;
             $post->description = $all['description'];
             $post->keywords = $all['keywords'];

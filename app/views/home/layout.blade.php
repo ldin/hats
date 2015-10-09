@@ -108,38 +108,53 @@
                             материалов по ценам произвоодителей</p>
                         </div>
                     </div>
-                    <div class='col-xs-12 col-sm-6'>
-                        <p>Что бы заказать каталоги или задать вопрос,<br> <b>заполните форму</b></p>
-                        <form method="POST" action="/form-request"  role="form">
-                            <div class="row">
-                                <div class="col-xs-5 input-block">
-                                    <div class="form-group">
-                                        <label for="inputName" class="sr-only">Имя</label>
-                                        <input type="text" name="name" class="" id="inputName" placeholder="Ваше имя">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="inputPhohe" class="sr-only">Телефон</label>
-                                        <input type="phone" name="phone" class="" id="inputPhohe" placeholder="Ваш телефон">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="inputEmail" class="sr-only">Email</label>
-                                        <input type="email" name="email" class="" id="inputEmail" placeholder="Ваш e-mail">
-                                      </div>
-                                      
-                                </div>
-                                <div class="col-xs-7 input-block">
-                                      <div class="form-group">
-                                        <label for="inputQuestion" class="sr-only">Ваше обращение</label>
-                                        <textarea name="text" class="" id="inputQuestion" placeholder="Ваш вопрос" rows='4'></textarea>
-                                      </div>     
+                    <div id="formRequest" class='col-xs-12 col-sm-6'>
+
+                        @if(Session::has('message_sent'))
+                        <div class="alert alert-success">
+                          <button type="button" class="close" data-dismiss="alert">×</button>
+                          {{ Session::get('message_sent') }}
+                        </div>
+                        @else
+                            @if(Session::has('message_error'))
+                            <div class="alert alert-danger">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                              {{ Session::get('message_error') }}
+                            </div>
+                            @endif
+
+                            <p>Что бы заказать каталоги или задать вопрос,<br> <b>заполните форму</b></p>
+                            <form method="POST" action="/form-request"  role="form">
+                                <div class="row">
+                                    <div class="col-xs-5 input-block">
+                                        <div class="form-group">
+                                            <label for="inputName" class="sr-only">Имя</label>
+                                            <input type="text" name="name" class="" id="inputName" placeholder="Ваше имя" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputPhohe" class="sr-only">Телефон</label>
+                                            <input type="phone" name="phone" class="" id="inputPhohe" placeholder="Ваш телефон" >
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputEmail" class="sr-only">Email</label>
+                                            <input type="email" name="email" class="" id="inputEmail" placeholder="Ваш e-mail" required>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="col-xs-7 input-block">
+                                          <div class="form-group">
+                                            <label for="inputQuestion" class="sr-only">Ваше обращение</label>
+                                            <textarea name="text" class="" id="inputQuestion" placeholder="Ваш вопрос" rows='4' required></textarea>
+                                          </div>     
+
+                                    </div>
 
                                 </div>
-
-                            </div>
-                            <div class="row text-right">
-                                <button type="submit" class="btn btn-solid">Отправить</button>
-                            </div>
-                        </form>                    
+                                <div class="row text-right">
+                                    <button type="submit" class="btn btn-solid">Отправить</button>
+                                </div>
+                            </form> 
+                        @endif                       
                     </div>
                 </div>
             </div> <!-- /.container -->

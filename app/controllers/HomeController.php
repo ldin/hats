@@ -124,7 +124,9 @@ class HomeController extends BaseController {
             $all = Input::all();
 
             $rules = array(
-                // 'name' => 'required|min:2|max:255',
+                'name' => 'required|min:2|max:255',
+                'text' => 'required|min:5',
+                'email'  => 'required|email',
             );
 
             $validator = Validator::make($all, $rules);
@@ -132,7 +134,7 @@ class HomeController extends BaseController {
                 return Redirect::to('/#contact')
                         ->withErrors($validator)
                         ->withInput()
-                        ->with('errorRequest', 'Ошибка');
+                        ->with('message_error', 'Ошибка, пожалуйста заполните форму');
             }
 
             $post = new Requests();
@@ -142,13 +144,12 @@ class HomeController extends BaseController {
             $post->text = $all['text'];
             $post->save();
 
-            // $mail = Setting::where('name', 'email')->first('value');
+            $mail = Setting::where('name', 'email')->first()->value;
             // $mail = 'ldin04ka@mail.ru';
-            $mail = 'sovet.consul@gmail.com';
-             //var_dump($mail->value); die();
+             // var_dump($mail); die();
 
             $messages = '<b>Пользователь: </b>'.$all['name'].'<br>';
-            $messages .= '<b>Вопрос: </b>'.$all['text'].'<br>';
+            $messages .= '<b>Сообщение: </b>'.$all['text'].'<br>';
             $messages .= '<b>Контактные данные: </b>'.'<br>';
             $messages .= '<i>Телефон: </i>'.$all['phone'].'<br>';
             $messages .= '<i>Емайл: </i>'.$all['email'].'<br>';
@@ -156,12 +157,12 @@ class HomeController extends BaseController {
                 Mail::send('emails.message',
                     array('messages' => $messages ),
                     function ($message) use ($mail)  {
-                        $message->to($mail)->subject('Обращение посетителя');
+                        $message->to($mail)->subject('Заказ каталога');
                     }
                 );
 
-            return Redirect::to('/#contact')
-                    ->with('successRequest', 'Сообщение отправлено');
+            return Redirect::to('/#formRequest')
+                    ->with('message_sent', 'Ваше сообщение отправлено, с вами свяжутся наши сотрудники.');
     }
 
     public function autocomplete($type, $street_id=''){

@@ -25,7 +25,8 @@
             <div class="container top-block">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-2 main-logo">
-                        <a href="/" id="logo">Arin-shapeau логотип</a>
+                        <div id="logo"></div>
+                        <a href="/" id="logo-link">Arin-shapeau логотип</a>
                     </div>
                     <div class="col-sm-7 col-xs-12 ">
                         <div class="row">           

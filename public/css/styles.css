@@ -37,6 +37,18 @@ ol, ul{padding-left: 25px;}
 
 
 /*heager*/
+#logo-link{
+    /* Скрываем текст */
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    font-size: 0;
+    color: rgba(255,255,255,0);  
+    display: block;
+    height: 130px;
+    width: 260px;    
+}
 #logo{
     background: url('../img/logo_arin.png') center center no-repeat transparent;
     background-image: url('../img/logo_arin.svg'), -khtml-linear-gradient(transparent, transparent);
@@ -48,14 +60,6 @@ ol, ul{padding-left: 25px;}
     background-repeat: no-repeat, no-repeat;
     -moz-background-size: 0 0, 100% 100%; /* FF3.6 */
     background-size: 100% 100%, 0 0;
-
-    /* Скрываем текст */
-    overflow: hidden;
-    text-indent: -9999px;
-    font-size: 0;
-    color: rgba(255,255,255,0);
-
-    /* Устанавливаем размеры логотипа */
     display: block;
     height: 179px;
     width: 260px;
@@ -70,9 +74,11 @@ header .block-contact p span{display: inline-block; width: 150px;}
 #main-menu li{display: table-cell;  border-left: 1px solid; width: 20%;}
 #main-menu li:last-of-type{border-right:1px solid #000;}
 #main-menu .nav>li>a:focus, #main-menu .nav>li>a:hover, #main-menu .nav>li.active>a{background-color: #e1eaee; color: #000;}
+@media (min-width: 768px ) and (max-width: 990px) {#main-menu a{ height: 90px;}}
 @media (max-width: 768px) {
-  #main-menu li{display: block;}
+  #main-menu li{display: block;width: 100%; }
   #main-menu li:last-of-type{border-right:0;}
+  #main-menu a{ height: 60px;}
 }
 /*header .nav{margin-top: 10px;}
 header .nav>li>a:focus, .nav>li>a:hover {background-color: #ff0066; color: #fff;}

@@ -7,4 +7,16 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	 config.language = 'ru';
 	// config.uiColor = '#AADC6E';
+
+    // разрешить теги <style>
+    config.protectedSource.push(/<(style)[^>]*>.*<\/style>/ig);
+    // разрешить теги <script>
+    config.protectedSource.push(/<(script)[^>]*>.*<\/script>/ig);
+
+    // разрешить php-код
+    // config.protectedSource.push(/<\?[\s\S]*?\?>/g);
+    
+    // разрешить любой код: <!--dev-->код писать вот тут<!--/dev-->
+    // config.protectedSource.push(/<!--dev-->[\s\S]*<!--\/dev-->/g);
+
 };

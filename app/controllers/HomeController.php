@@ -51,7 +51,7 @@ class HomeController extends BaseController {
         else if($type_post->template=='news'){
 
             if($slug==''){
-                $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->paginate(20);
+                $posts = Post::where('type_id',$type_post->id)->where('status',1)->where('parent',0)->orderBy('created_at', 'desc')->paginate(6);
             }else{
                 $row = Post::where('slug', $slug)->first();            
             }

@@ -11,7 +11,9 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/styles.css?0002" rel="stylesheet">
 
-  <!-- <link href="http://allfont.ru/allfont.css?fonts=birchctt" rel="stylesheet" type="text/css" /> -->
+    <!--[if lt IE 9]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
 
     @yield('header')
 
@@ -23,9 +25,7 @@
             <div class="container top-block">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-sm-offset-2 main-logo">
-                        <a href="/">
-                            <img src="/img/logo_arin.png">
-                        </a>
+                        <a href="/" id="logo">Arin-shapeau логотип</a>
                     </div>
                     <div class="col-sm-7 col-xs-12 ">
                         <div class="row">           

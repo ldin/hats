@@ -65,9 +65,9 @@ header .block-contact{margin-top: 40px; float: right;}
 header a{color: #000; }
 header .block-contact p span{display: inline-block; width: 150px;}
 #main-menu{ background-color: #ecf1f9; ;}
-#main-menu a{ font-family: BirchCTT; font-size: 20px; word-wrap: break-word; width: 200px; height: 70px;  }
+#main-menu a{ font-family: BirchCTT; font-size: 20px; word-wrap: break-word; height: 70px;  }
 #main-menu ul{ margin: 0; padding: 0; list-style: none; display: table; width: 100%; border-collapse: collapse;}
-#main-menu li{display: table-cell;  border-left: 1px solid;}
+#main-menu li{display: table-cell;  border-left: 1px solid; width: 20%;}
 #main-menu li:last-of-type{border-right:1px solid #000;}
 #main-menu .nav>li>a:focus, #main-menu .nav>li>a:hover, #main-menu .nav>li.active>a{background-color: #e1eaee; color: #000;}
 @media (max-width: 768px) {

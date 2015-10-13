@@ -27,7 +27,7 @@ hr.style{margin: 0; padding: 0; height: 22px; background: url('../img/bg_tricots
 a{color: #ff0066;}
 a:hover{color: #8e3d5e; text-decoration: none;}
 a.totop{height: 37px; width: 37px; display: inline-block; background: url('/img/icon/top.png') no-repeat;}
-
+ol, ul{padding-left: 20px;}
 /*btn*/
 .btn{height: 40px; border-radius: 20px; padding:7px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
 .btn-border{background: #fff; color: #ff0066; border:1px solid #ff0066;}

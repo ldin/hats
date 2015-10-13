@@ -38,7 +38,7 @@
             </div>
         @endif
 
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
             @if(!empty($row->text))
                 {{ $row->text }}

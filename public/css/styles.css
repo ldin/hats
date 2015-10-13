@@ -24,9 +24,11 @@ footer{height: 390px;  margin-top: -390px;}
 /*p*/
 h1, h2, h3, h4{color: #000}
 hr.style{margin: 0; padding: 0; height: 22px; background: url('../img/bg_tricots-blue.png'); }
+
 a{color: #ff0066;}
 a:hover{color: #8e3d5e; text-decoration: none;}
-a.totop{height: 37px; width: 37px; display: inline-block; background: url('/img/icon/top.png') no-repeat;}
+a.totop{height: 42px; width: 42px; display: inline-block; background: url('../img/icon/top.png') no-repeat;}
+a.totop:hover{background-image: url('../img/icon/top-hover.png')}
 ol, ul{padding-left: 25px;}
 /*btn*/
 .btn{height: 40px; border-radius: 20px; padding:7px 40px; font-size: 18px; text-decoration: none; transition:.5s;}
@@ -215,11 +217,11 @@ border-radius: 10px;
 #advice{padding-bottom: 50px;}
 #advice .block-btn{margin-top: 40px;}
 #advice h2{ font-size: 40px;}
-#advice em{color: #ff0066; font-style:normal;}
+#advice em{font-weight: bold; font-style:normal;}
 #advice .block{padding: 5px;  }
 #advice .block-hover{height: 250px; position: relative;}
 #advice .block .title, #advice .block .description{height: 100%; width: 100%; position: absolute;}
-#advice .block .title{background-color: #edf2f9; font-size: 18px;  padding: 30px;}
+#advice .block .title{background-color: #edf2f9; text-align: center; font-size: 18px;  padding: 30px;}
 #advice .block .description{background:#fff; padding: 5px; font-size: 16px;  top: 0; opacity: 0; transition: 0.5s;}
 #advice .block:hover .description{opacity: 1}
 #advice .block .btn{height: 34px; padding: 3px 40px;}
@@ -233,7 +235,7 @@ footer input, textarea{border:1px solid #ff0066; width: 100%; padding-left: 5px;
 footer .input-block{padding: 0 4px;}
 footer .linegray{background-color:#edf2f9; padding: 15px 0; }
 footer .linegray .menu-item{padding-left: 20px}
-footer .totop{margin-bottom: -45px;}
+/*footer .totop{margin-bottom: -45px;}*/
 
 
 /*pages*/

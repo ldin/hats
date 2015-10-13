@@ -175,9 +175,7 @@
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#top-pages -->
-        <div class="text-center">
-            <a href="#top-site" class="totop"></a>
-        </div>
+
     <section id="advice">
         <div class="container">
             <h2 class="text-center">Информация для клиентов</h2>
@@ -185,18 +183,14 @@
                 <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
+                            <img src="/img/other/info-bar1.png" alt="изделия TAVITTA">
                             <p>
-                                <em>Информация для покупателей по уходу</em> за   головными уборами марки   «TAVITTA» и «TAVITTA kids»
+                                Рекомендации по уходу за изделиями  TAVITTA 
                             </p>
                         </div>
                         <div class="description">
-                            <p>Пользуйтесь рекомендациями по уходу за вязаными изделиями  ТМ «TAVITTA» и ТМ «TAVITTA kids»</p>
-                            <p>
-                                <em>- Стирка</em><br>
-                                <em>- Полоскание</em><br>
-                                <em>- Сушка</em><br>
-                                <em>- Особенности декора</em><br>
-                                <em>- Что не рекомендуется делать</em>
+                            <p>При производстве изделий используется дорогая качественная фурнитура и натуральные материалы. 
+                                Им необходим особо бережный уход или химчистка в специальных пунктах для чистки изделий из шерсти и меха.
                             </p>
                             <a href="#" class="btn btn-solid">подробнее</a>
                         </div>
@@ -205,31 +199,49 @@
                 <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
+                            <img src="/img/other/info-bar2.png" alt="Cтирка и полоскание">
                             <p>
-                                Текст, <em>ключевое слово</em>, и дальнейшая формулировка вопроса?
+                                <em>Cтирка и полоскание</em> шерстяных изделий
                             </p>
                         </div>
-                        <div class="description"></div>
+                        <div class="description">
+                            <p>
+                                Рекомендуйте вашим покупателям стирать вязаные шерстяные изделия отдельно от другой одежды, без замачивания, при невысокой температуре с использованием специальных моющих средств для стирки шерстяных изделий.
+                            </p>
+                            <a href="#" class="btn btn-solid">подробнее</a>
+                        </div>
                     </div>    
                 </div>
                 <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
+                            <img src="/img/other/info-bar3.png" alt="Сушка и глаженье">
                             <p>
-                                Как стать нашим партнером и <em>заказать каталог</em>?
+                                <em>Сушка и глаженье</em> шерстяных изделий
                             </p>
                         </div>
-                        <div class="description"></div> 
+                        <div class="description">
+                            <p>Следует завернуть изделие в полотенце и слегка отжать до полусухого состояния; сушить при комнатной t ̊ на ровной поверхности.
+                                Высушенные изделия можно обработать паром, если на них нет декоративных и  рельефных элементов.</p>
+                            <a href="#" class="btn btn-solid">подробнее</a>
+                        </div> 
                     </div>       
                 </div>
                 <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
                         <div class="title">
+                            <img src="/img/other/info-bar4.png" alt="Не рекомендуемые действия">
                             <p>
-                                Как <em>сделать заказ</em> на оптовую закупку из наших коллекций?
+                                <em>Не рекомендуемые</em><br> действия
                             </p>
                         </div>
-                        <div class="description"></div> 
+                        <div class="description">
+                            <p>
+                                <em>Нельзя</em> резко менять температуру воды при стирке и полоскании, надолго замачивать вязаное изделие и сыпать на него стиральный порошок; тереть, растягивать, выжимать;
+                                вешать только что выстиранный трикотаж, сушить около радиатора, под солнечными лучами, в сушильной машине.
+                            </p>
+                            <a href="#" class="btn btn-solid">подробнее</a>
+                        </div> 
                     </div>        
                 </div>
             </div> <!-- /.row -->

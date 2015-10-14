@@ -40,7 +40,7 @@
 			        </div>
 
 		        	{{ Form::submit('Сохранить', array( 'class' => 'btn btn-default')) }}
-		        	{{ HTML::link('/admin/delete/image/'.$row->id.'/'.$image->id, 'Удалить', array('class' => 'btn btn-danger', 'onClick' =>"return window.confirm('Вы уверены что хотите удалить изображение?')")) }}
+		        	{{ HTML::link('/admin/delete/image/'.$row->id.'/'.$image->id, 'Удалить фото', array('class' => 'btn btn-default red', 'onClick' =>"return window.confirm('Вы уверены что хотите удалить изображение?')")) }}
 
 				{{ Form::close() }}
 			</div>	

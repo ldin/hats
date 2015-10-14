@@ -9,6 +9,7 @@
 /* slider */
 .btn-slide{color: #fff; border: 1px solid #fff; padding: 5px 15px; text-decoration: none; text-align: center;}
 .btn-slide:hover{text-decoration: none; background: #fff; color: #000;}
+.btn.red{color: red;}
 
 #slider .block {padding: 50px 0 40px;}
 #slider{padding-bottom: 40px; min-height: 300px; background: #517b91 url(/img/Img-bg.png) no-repeat;  background-size: cover; }

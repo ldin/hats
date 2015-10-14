@@ -40,40 +40,19 @@
                         </div>
                         <div class="col-xs-12">
                             <div id="carusel" class="scroll-img">
-                                <ul>
-                                    <li>
-                                            <img src="img/slider/top-face1.jpg" alt="">
-                                            <p class="title">TAVITTA - 2013</p>
-                                    </li>
-                                    <li>
-                                            <img src="img/slider/top-face2.jpg" alt="">
-                                            <p class="title">Brend2 - 2013</p>
-                                    </li>  
-                                    <li>
-                                            <img src="img/slider/top-face3.jpg" alt="">
-                                            <p class="title">TAVITTA - 2013</p>
-                                    </li> 
-                                    <li>
-                                            <img src="img/slider/top-face2.jpg" alt="">
-                                            <p class="title">Brend2 - 2013</p>
-                                    </li>
-                                    <li>
-                                            <img src="img/slider/top-face1.jpg" alt="">
-                                            <p class="title">TAVITTA - 2013</p>
-                                    </li>
-                                    <li>
-                                            <img src="img/slider/top-face3.jpg" alt="">
-                                            <p class="title">TAVITTA - 2013</p>
-                                    </li> 
-                                </ul>        
+                                @if(!empty($slides))
+                                    <ul>
+                                        @foreach($slides as $slide)
+                                            <li>
+                                                    {{HTML::image($slide->image, $slide->name)}}
+                                                    <p class="title">{{$slide->name}}</p>
+                                            </li>                                            
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         </div>    
-<!--                         <div class='col-xs-12'>
-                            <div id="carusel-btn" class="text-center">
-                              <button class="btn" id="carusel-backward"><i class="icon-chevron-left"></i> < </button>
-                              <button class="btn" id="carusel-forward"> > <i class="icon-chevron-right"></i></button>
-                            </div>
-                        </div> -->
+
                     </div>
                 </div>
             </div> <!-- /.row -->
@@ -99,7 +78,31 @@
 
     <section id="top-pages">
         <div class="container">
+
             <div class="row">
+                @if(!empty($news))
+                    @foreach($news as $post)
+                        <div class="col-xs-12 col-md-6">
+                            <div class="block">
+                                <div class="image part col-xs-12 col-sm-6 ">
+                                    {{ HTML::image($post->image, $post->name) }}
+                                </div>
+                                <div class="description part col-xs-12 col-sm-6">
+                                    <p>
+                                        {{$post->preview_text}}
+                                    </p>
+                                    <a href="#" class="btn btn-solid">подробнее</a>
+                                </div>
+                                <div class="title part col-xs-12 col-sm-6">
+                                    <h2>{{$post->name}}</h2>
+                                    <!-- <p></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+<!--             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <div class="block">
                         <div class="image part col-xs-12 col-sm-6 ">
@@ -169,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- /.row -->
+            </div> --> <!-- /.row -->
             <div class="row text-center block-btn">
                 <a href="#" class="btn btn-border">Все новости</a>
             </div> <!-- /.row -->

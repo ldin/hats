@@ -33,15 +33,11 @@
         </div>
 
         <div class="form-group ">
-            {{ Form::label('inputTitle', 'Фоновое изображение', array('class'=>'control-label')) }}
+            {{ Form::label('inputTitle', 'Изображение', array('class'=>'control-label')) }}
             {{ Form::file('image') }}
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-6 info-txt">
-                <p>Предварительный просмотр слайда станет возможным после того, как вы сохраните текущие изменения</p>
-                <p>Если изображение не добавлено будет отображаться темный фон</p>
-            </div>
             <div class="col-xs-12 col-sm-6 slide-preview-img">
                 @if((isset($row->image)?$row->image:''))
                     {{ HTML::image($row->image, '') }}
@@ -50,20 +46,21 @@
             {{-- <img src={{(isset($row->image)&&$row->image)?'/'.$row->image:'/img/noimage.png'}}> --}}
         </div>
 
+        <!--         
         <div class="form-group">
             {{ Form::label('inputText', 'Текст на слайде') }}
             {{Form::textarea('text', (isset($row->text)?$row->text:''), array('class' => 'form-control ', 'id'=>'inputText')); }}
-        </div>
+        </div> -->
 
         <div class="form-group">
             <div class="checkbox">
               <label>
-                {{ Form::checkbox('status', '1', (isset($row->status)&&($row->status==true)?array('checked'):'') )  }}
+                {{ Form::checkbox('status', '1', (isset($row->status)&&($row->status==false)?'':array('checked')) )  }}
                 Показывать на главной <span class="info-txt"> ( иначе доступ только из админки) </span>
               </label>
             </div>
         </div>
-
+        <!--
         <div class="form-group">
             {{ Form::label('inputButton', 'Текст на кнопке') }}
             {{ Form::text('button', (isset($row->button)?$row->button:''), array('class'=>'form-control', 'id'=>'inputButton')); }}
@@ -73,6 +70,7 @@
             {{ Form::label('inputLink', 'Ссылка') }}
             {{ Form::text('link', (isset($row->link)?$row->link:''), array('class'=>'form-control', 'id'=>'inputButton')); }}
         </div>
+        -->
 
 
 
@@ -84,14 +82,6 @@
 
     </div>
 {{ Form::close() }}
-
-<h3 id="preview-slide">Предварительный просмотр слайда:</h3>
-
-    <div id="slider">
-        <div class="row block">
-            @include('home.slider')
-        </div>
-    </div>
 
 </div>
 

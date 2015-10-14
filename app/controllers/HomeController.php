@@ -25,7 +25,18 @@ class HomeController extends BaseController {
 
     public function showWelcome()
     {
-        return View::make('home.index');
+        $slides = Slider::where('status',1)->get();
+        $news = Post::where('type_id', Type::where('type','news')->first()->id)->orderBy('created_at', 'desc')->take(4)->get(array('text', 'image', 'name'));
+            foreach ($news as $key => $post) {
+                $preview = HomeController::previewFirstSimbol($post->text, 500);
+                $post->preview_text = $preview['text'];
+            }
+        $view = array(
+            'slides'=>$slides,
+            'news'=>$news,
+        );
+
+        return View::make('home.index', $view);
     }
 
     public function getPage($type, $slug=''){

@@ -56,14 +56,6 @@
              <li {{ (Request::is('admin/user*')) ? 'class="active"' : '' }} > {{ HTML::link('admin/user', 'Пользователи'); }} </li>
              <li> {{ HTML::link('#', ''); }} </li>
            </ul>
-           <!--
-           <form class="navbar-form navbar-left" role="search">
-             <div class="form-group">
-               <input type="text" class="form-control" placeholder="Search">
-             </div>
-             <button type="submit" class="btn btn-default">Найти</button>
-           </form>
-           -->
            <ul class="nav navbar-nav navbar-right">
              <li>
                 <?php echo HTML::decode(HTML::link('/', '<i class="glyphicon glyphicon-home"></i>&nbsp;SITE', array('class'=>'addNews'))); ?>
@@ -115,11 +107,11 @@
 
         </div> <!-- /container -->
 
-@else
-    <div id="login">
-        @yield('content')
-    </div>
-@endif
+  @else
+      <div id="login">
+          @yield('content')
+      </div>
+  @endif
 
     <div id="other">
         @yield('other')

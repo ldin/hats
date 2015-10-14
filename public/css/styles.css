@@ -100,7 +100,7 @@ header .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
 #slider .right-block{max-width: 724px; padding-top: 120px; color: #fff;}
 #slider .right-block .top-line{background:#ff0066; color: #fff; margin-bottom: 0; padding: 4px 0;}
 #slider .right-block .title{position: absolute; width: 100%; padding: 4px 0; margin: 0; bottom: 0; background-color: rgba(0, 0, 0, .3);  text-align: center;}
-#slider .right-block img{width: 100%;}
+#slider .right-block img{height: 218px; width: 218px;}
 @media (max-width: 768px) {
   #slider .right-block{padding: 20px 0;} 
   #slider .left-block .title{ font-size: 33px; }

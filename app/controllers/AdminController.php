@@ -385,4 +385,60 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
 
         }
 
+//слайдер
+
+    public function getSlider($id='')
+        {
+            $slides_menu = Slider::get(['id', 'name']);
+            $slide = Slider::where('id', $id)->get();
+
+            $view = array(
+                'slides_menu' => $slides_menu,
+                'slides' => $slide,
+                'row' => (!empty($slide[0]))?$slide[0]:'',
+            );
+            return View::make('admin.slider', $view);
+        }
+
+    public function postSlider($id='')
+        {
+            $all = Input::all();
+            $rules = array(
+                'name' => 'required|min:2|max:255',
+            );
+            $validator = Validator::make($all, $rules);
+            if ( $validator -> fails() ) {
+                return Redirect::to('/admin/slider/'.$id)
+                        ->withErrors($validator)
+                        ->withInput()
+                        ->with('error', 'Ошибка');
+            }
+            if(is_numeric($id))   {
+                  $post = Slider::find($id);
+            }
+            else {
+                $post = new Slider();
+            }
+
+            $post->name = $all['name'];
+            // $post->text = $all['text'];
+            // $post->button = $all['button'];
+            // $post->link = $all['link'];
+            $post->status = isset($all['status'])?true:false;
+
+            if(isset($all['image'])){
+                $full_name = Input::file('image')->getClientOriginalName();
+                $filename=$full_name;
+                $path = 'upload/slider/';
+                Input::file('image')->move($path, $filename);
+                $post->image = $path.$filename;
+            }
+
+            $post->save();
+
+            return Redirect::to('/admin/slider/'.$id.'/#preview-slide')
+                    ->with('success', 'Изменения сохранены');
+
+        }
+
 }

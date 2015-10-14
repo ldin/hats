@@ -96,7 +96,7 @@
         <br />
         {{ Form::label('', '') . Form::submit('Сохранить', array( 'class' => 'btn btn-success')) }}
         @if(isset($row['id']))
-              {{ HTML::link('/admin/delete/page/'.$type_id.'/'.$row['id'], 'Удалить', array('class' => 'btn btn-danger', 'onClick' =>"return window.confirm('Вы уверены что хотите удалить статью?')")) }}
+              {{ HTML::link('/admin/delete/page/'.$type_id.'/'.$row['id'], 'Удалить раздел', array('class' => 'btn btn-danger', 'onClick' =>"return window.confirm('Вы уверены что хотите удалить статью?')")) }}
         @endif
 
     </div>

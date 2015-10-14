@@ -237,11 +237,14 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
                 $redir = '/admin/user';
                 break;
             case 'image':
-                $slide = Gallery::find($id)->first();;
-                unlink($slide->image);
-                unlink($slide->small_image);
+                $slide = Gallery::find($id);
+                if (file_exists($slide->image)) {
+                    unlink($slide->image);
+                }
+                if (file_exists($slide->small_image)) {
+                    unlink($slide->small_image);
+                }
                 $slide->delete();
-                // $redir = '/admin/content/'.$type_id;
                 return Redirect::back();
                 break;    
         }

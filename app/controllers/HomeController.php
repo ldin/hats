@@ -26,7 +26,7 @@ class HomeController extends BaseController {
     public function showWelcome()
     {
         $slides = Slider::where('status',1)->get();
-        $news = Post::where('type_id', Type::where('type','news')->first()->id)->orderBy('created_at', 'desc')->take(4)->get(array('text', 'image', 'name'));
+        $news = Post::where('type_id', Type::where('type','news')->first()->id)->orderBy('created_at', 'desc')->take(4)->get(array('text', 'image', 'name', 'slug'));
             foreach ($news as $key => $post) {
                 $preview = HomeController::previewFirstSimbol($post->text, 500);
                 $post->preview_text = $preview['text'];

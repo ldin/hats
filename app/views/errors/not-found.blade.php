@@ -19,7 +19,7 @@
 
     <div class="row row-block block-404 txt1">
         <div class="col-xs-12">
-            <p class="left e404 error404"> ! </p>
+            <br><br>
             <p class="left error404"> 404 <br /> Страница не найдена</p>
         </div>    
             <br /><br />

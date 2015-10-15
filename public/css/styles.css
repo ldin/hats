@@ -216,13 +216,13 @@ border-radius: 10px;
 /*advice*/
 #advice{padding-bottom: 50px;}
 #advice .block-btn{margin-top: 40px;}
-#advice h2{ font-size: 40px;}
+#advice h2{ font-size: 40px; margin-bottom: 26px;}
 #advice em{font-weight: bold; font-style:normal;}
 #advice .block{padding: 5px;  }
 #advice .block-hover{height: 250px; position: relative;}
 #advice .block .title, #advice .block .description{height: 100%; width: 100%; position: absolute;}
 #advice .block .title{background-color: #edf2f9; text-align: center; font-size: 18px;  padding: 30px;}
-#advice .block .description{background:#fff; padding: 5px; font-size: 16px;  top: 0; opacity: 0; transition: 0.5s;}
+#advice .block .description{background:#fff; padding: 5px; top: 0; opacity: 0; transition: 0.5s;}
 #advice .block:hover .description{opacity: 1}
 #advice .block .btn{height: 34px; padding: 3px 40px;}
 

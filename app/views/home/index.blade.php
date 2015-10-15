@@ -30,7 +30,7 @@
                         трикотажных головных уборов для женщин и детей
                     </p>
                     <div>
-                        <a href="#" class="btn btn-solid">ЗАКАЗАТЬ КАТАЛОГ</a>
+                        <a href="#formRequest" class="btn btn-solid">ЗАКАЗАТЬ КАТАЛОГ</a>
                     </div>                  
                 </div>
                 <div class="col-sm-8 col-xs-12 right-block" >
@@ -102,86 +102,16 @@
                     @endforeach
                 @endif
             </div>
-<!--             <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="block">
-                        <div class="image part col-xs-12 col-sm-6 ">
-                            <img src="img/pages/news-img01.jpg">
-                        </div>
-                        <div class="description part col-xs-12 col-sm-6">
-                            <p>
-                                Следствие: бесконечно малая величина осмысленно нейтрализует график функции многих переменных. Аффинное преобразование не критично. Используя таблицу интегралов элементарных функций, получим: асимптота вырождена. Комплексное число, следовательно, уравновешивает комплексный двойной интеграл. 
-                            </p>
-                            <a href="#" class="btn btn-solid">подробнее</a>
-                        </div>
-                        <div class="title part col-xs-12 col-sm-6">
-                            <h2>Шерсть новозеландской овцы</h2>
-                            <p>В детских изделиях сезона</p>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="block">
-                        <div class="image part col-xs-12 col-sm-6">
-                            <img src="img/pages/news-img02.jpg">
-                        </div>
-                        <div class="description part col-xs-12 col-sm-6">
-                            <p>
-                                Комплексное число, следовательно, уравновешивает комплексный двойной интеграл. Максимум охватывает линейно зависимый интеграл от функции, обращающейся в бесконечность вдоль линии, что неудивительно. Аксиома соответствует натуральный логарифм.                              
-                            </p>
-                            <a href="#" class="btn btn-solid">подробнее</a>
-                        </div>
-                        <div class="title part col-xs-12 col-sm-6">
-                            <h2>Свободный стиль- </h2>
-                            <p>тренд сезона Осень-Зима 2015 г</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="block">
-                        <div class="image part col-xs-12 col-sm-6">
-                            <img src="img/pages/news-img03.jpg">
-                        </div>
-                        <div class="description part col-xs-12 col-sm-6">
-                            <p>
-                                Поэтому теорема Гаусса - Остроградского проецирует изоморфный интеграл по бесконечной области. Матожидание необходимо и достаточно. Дивергенция векторного поля, как следует из вышесказанного, определяет экспериментальный функциональный анализ.
-                            </p>
-                            <a href="#" class="btn btn-solid">подробнее</a>
-                        </div>                          
-                        <div class="title part col-xs-12 col-sm-6">
-                            <h2>Свободный стиль - </h2>
-                            <p>тренд сезона Осень-Зима 2015 г</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="block">
-                        <div class="image part col-xs-12 col-sm-6">
-                            <img src="img/pages/news-img04.jpg">
-                        </div>
-                        <div class="description part col-xs-12 col-sm-6">
-                            <p>
-                                Интересно отметить, что иррациональное число притягивает интеграл Фурье. Частная производная детерменирована. Натуральный логарифм, исключая очевидный случай, синхронизирует график функции многих переменных, что несомненно приведет нас к истине. Тройной интеграл является следствием. Итак, ясно, что связное множество нейтрализует интеграл от функции, обращающейся в бесконечность в изолированной точке.                             
-                            </p>
-                            <a href="#" class="btn btn-solid">подробнее</a>
-                        </div>
-                        <div class="title part col-xs-12 col-sm-6">
-                            <h2>Ключевое слово</h2>
-                            <p>важной текущей новости</p>
-                        </div>
-                    </div>
-                </div>
-            </div> --> <!-- /.row -->
             <div class="row text-center block-btn">
-                <a href="#" class="btn btn-border">Все новости</a>
+                <a href="/news" class="btn btn-border">Все новости</a>
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#top-pages -->
 
     <section id="advice">
         <div class="container">
-            <h2 class="text-center">Информация для клиентов</h2>
+            <h2 class="text-center">Уход за изделиями</h2>
             <div class="row">
                 <div class="col-xs-12 col-sm-3 block">
                     <div class="block-hover">
@@ -249,7 +179,7 @@
                 </div>
             </div> <!-- /.row -->
             <div class="row text-center block-btn">
-                <a href="#" class="btn btn-border">Все вопросы</a>
+                <a href="/advice_consumers" class="btn btn-border">Все рекомендации</a>
             </div> <!-- /.row -->
         </div>
     </section> <!-- /#advice -->

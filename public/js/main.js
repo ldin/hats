@@ -1,7 +1,7 @@
     $(document).ready(function() {
      
-      //прокрутка вверх плавная
-       $("a.totop").click(function() {
+      //прокрутка плавная
+       $("a.js-soft").click(function() {
           $("html, body").animate({
              scrollTop: $($(this).attr("href")).offset().top + "px"
           }, {
@@ -10,6 +10,5 @@
           });
           return false;
        });
-     
      
     });

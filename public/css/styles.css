@@ -227,7 +227,7 @@ border-radius: 10px;
 #advice .block .btn{height: 34px; padding: 3px 40px;}
 
 /*footer*/
-footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding-top: 10px;}
+footer .footer-bg{background: url('/img/bg/bg-footer-40perc.jpg') no-repeat; background-size: cover; padding-top: 10px; padding-bottom: 13px;}
 footer .left-block{ margin-top: 50px;}
 footer .left-block img{max-width: 100%;}
 footer .form-group{margin-bottom: 8px;}

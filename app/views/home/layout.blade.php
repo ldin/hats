@@ -169,11 +169,11 @@
                         <p>2015 Arin-shapeau</p>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p>Тел:<a href="tel:{{!empty($settings['phone_head'])?'+'.preg_replace('/[^0-9]/', '', $settings['phone_head']):''}}"><i class="picto picto-phone"></i><span> {{ !empty($settings['phone_head'])?$settings['phone_head']:'' }}</span></a> </p>
+                        <p>Тел:<a href="tel:{{!empty($settings['phone_head'])?'+'.preg_replace('/[^0-9]/', '', $settings['phone_head']):''}}"> {{ !empty($settings['phone_head'])?$settings['phone_head']:'' }}</a> </p>
 
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p>mail:<a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}"><i class="picto picto-mail"></i><span> {{ !empty($settings['email_head'])?$settings['email_head']:'' }}</span></a></p>
+                        <p>mail:<a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}"> {{ !empty($settings['email_head'])?$settings['email_head']:'' }}</a></p>
 
                     </div>
                 </div>

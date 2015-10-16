@@ -34,6 +34,7 @@
 
         <div class="form-group ">
             {{ Form::label('inputTitle', 'Изображение', array('class'=>'control-label')) }}
+            <p class="info-txt">Желательный размер изображения 218 х 218 px</p>
             {{ Form::file('image') }}
         </div>
 

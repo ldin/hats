@@ -12,13 +12,14 @@
             @foreach ($settings as $setting)
                 <div class="row">
                     <div class="form-group col-sm-8">
-                        {{ Form::label($setting->name, $setting->title, ['class'=>'col-sm-2 control-label']) }}
-                        <div class="col-sm-10">
-                            {{  Form::textarea($setting->name, $setting->value, array('class' => 'form-control', 'rows'=>'2')) }}
+                        {{ Form::label($setting->name, $setting->title, ['class'=>'col-sm-3 control-label']) }}
+                        <div class="col-sm-9">
+                            {{  Form::text($setting->name, $setting->value, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
             @endforeach
+
         </div>
 
         <br>

@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="form-group col-sm-6 col-xs-12">
-                {{ Form::label('selectType', 'Тип страницы') }}
+                {{ Form::label('selectType', 'Отображать в разделе') }}
                 {{ Form::select('type_id', $type_page, $type_id, array('class' => 'form-control ', 'id'=>'selectType'))}}
             </div>
             <div class="form-group col-sm-6 col-xs-12">
@@ -49,7 +49,7 @@
             <div class="form-group form-inline col-sm-6 col-xs-12">
                 {{ Form::text('order', (isset($row->order)?$row->order:''), array('class' => 'form-control order-select', 'id'=>'selectOrder'))}}
                 {{ Form::label('selectOrder', 'Порядок вывода на сайте') }}
-                <small><p class="info-txt">Для коллекций</p></small>
+                <small><p class="info-txt">Только для коллекций</p></small>
 
             </div> 
             <div class="form-group col-sm-6 col-xs-12">

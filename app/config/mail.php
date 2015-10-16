@@ -15,8 +15,8 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
-	// 'driver' => 'mail',
+	// 'driver' => 'smtp',
+	'driver' => 'mail',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -29,8 +29,8 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.yandex.ru',
-	// 'host' => 'localhost',
+	// 'host' => 'smtp.yandex.ru',
+	'host' => 'localhost',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'infoturk.os@yandex.ru', 'name' => 'Sovet Consulting'),
+	'from' => array('address' => '', 'name' => 'Arin-shapeau'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -84,7 +84,7 @@ return array(
 	|
 	*/
 
-	'username' => 'infoturk.os',
+	'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -97,7 +97,7 @@ return array(
 	|
 	*/
 
-	'password' => 'Vw3CpL7yapuTS9T',
+	'password' => '',
 
 	/*
 	|--------------------------------------------------------------------------

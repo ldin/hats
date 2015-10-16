@@ -30,9 +30,9 @@
                     </div>
                     <div class="col-sm-7 col-xs-12 ">
                         <div class="row">           
-                            <div class="block-contact"> 
-                                <p><a href=""><i class="picto picto-phone"></i><span> +9(495)3216547</span></a> </p>
-                                <p><a href=""><i class="picto picto-mail"></i><span> Написать письмо</span></a></p>
+                            <div class="block-contact">         
+                                <p><a href="tel:{{!empty($settings['phone_head'])?'+'.preg_replace('/[^0-9]/', '', $settings['phone_head']):''}}"><i class="picto picto-phone"></i><span> {{ !empty($settings['phone_head'])?$settings['phone_head']:'' }}</span></a> </p>
+                                <p><a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}"><i class="picto picto-mail"></i><span> {{ !empty($settings['email_head'])?$settings['email_head']:'' }}</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
 
     <footer>
         <div class="text-center">
-            <a href="#top-site" class="totop"></a>
+            <a href="#top-site" class="totop js-soft"></a>
         </div>
         <hr class="style">
         <div class="linegray">
@@ -112,10 +112,12 @@
                     <div id="formRequest" class='col-xs-12 col-sm-6'>
 
                         @if(Session::has('message_sent'))
-                        <div class="alert alert-success">
-                          <button type="button" class="close" data-dismiss="alert">×</button>
-                          {{ Session::get('message_sent') }}
-                        </div>
+                        <div class="success-message">
+                            <div class="alert alert-success">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                              {{ Session::get('message_sent') }}
+                            </div>
+                        </div>    
                         @else
                             @if(Session::has('message_error'))
                             <div class="alert alert-danger">
@@ -167,10 +169,12 @@
                         <p>2015 Arin-shapeau</p>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p>Тел:<a href="tel:+74951237654"> 8(495) 1237654</a></p>
+                        <p>Тел:<a href="tel:{{!empty($settings['phone_head'])?'+'.preg_replace('/[^0-9]/', '', $settings['phone_head']):''}}"><i class="picto picto-phone"></i><span> {{ !empty($settings['phone_head'])?$settings['phone_head']:'' }}</span></a> </p>
+
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <p>mail:<a href="mailto:arin@hapeau.mail"> arin@hapeau.mail</a></p>
+                        <p>mail:<a href="mailto:{{ !empty($settings['email_head'])?$settings['email_head']:'' }}"><i class="picto picto-mail"></i><span> {{ !empty($settings['email_head'])?$settings['email_head']:'' }}</span></a></p>
+
                     </div>
                 </div>
             </div>

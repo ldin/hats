@@ -267,7 +267,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
     public function postSettings($news_id='')
         {
             $settings = Input::all();
-
             foreach($settings as $key=>$setting) {
                 if($key[0]!='_'){
                     $field_ru = Setting::where('name', '=', $key)->first();

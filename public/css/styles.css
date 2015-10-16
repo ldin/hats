@@ -235,6 +235,7 @@ footer input, textarea{border:1px solid #ff0066; width: 100%; padding-left: 5px;
 footer .input-block{padding: 0 4px;}
 footer .linegray{background-color:#edf2f9; padding: 15px 0; }
 footer .linegray .menu-item{padding-left: 20px}
+footer .success-message{margin-top: 45px;}
 /*footer .totop{margin-bottom: -45px;}*/
 
 

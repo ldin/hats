@@ -17,8 +17,10 @@ class HomeController extends BaseController {
     protected function setupLayout()
     {
         $type_page=Type::where('status',1)->lists('name', 'type');
+        $settings = Setting::lists('value', 'name');
 
         View::share([
+            'settings'=>$settings,
             'type_page'=>$type_page,
         ]);
     }

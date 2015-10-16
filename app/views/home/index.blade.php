@@ -1,6 +1,6 @@
 @extends('home.layout')
 
-@section('title') Arin @stop
+@section('title') {{ !empty($settings['title'])?$settings['title']:'Arin-shapeau' }} @stop
 
 @section('header')
 

@@ -13,13 +13,11 @@
         <div id="snowflake" class="text-center">
             <img src="/img/bg/snow-1.png" class="parallax-layer" >
             <img src="/img/bg/snow-2.png" class="parallax-layer">        
-<!--             <img src="/img/bg/snow-test1-tst.png" class="parallax-layer" >
-            <img src="/img/bg/snow-test2-tst.png" class="parallax-layer"> -->
         </div>
 
         <div class="container text-slide-block">
             <div class="row head-slide">
-                <div class="col-sm-4 col-xs-12 left-block">
+                <div class="col-md-4 col-xs-12 left-block">
                     <p class="title">
                         <span>Осень\Зима 2015</span>
                     </p>
@@ -30,10 +28,10 @@
                         трикотажных головных уборов для женщин и детей
                     </p>
                     <div>
-                        <a href="#formRequest" class="btn btn-solid">ЗАКАЗАТЬ КАТАЛОГ</a>
+                        <a href="#formRequest" class="btn btn-border">ЗАКАЗАТЬ КАТАЛОГ</a>
                     </div>                  
                 </div>
-                <div class="col-sm-8 col-xs-12 right-block" >
+                <div class="col-md-8 col-xs-12 right-block" >
                     <div class="block">
                         <div class=" text-center col-xs-12">
                             <p class="top-line">Вспоминаем модели прошлых сезонов</p>
@@ -113,7 +111,7 @@
         <div class="container">
             <h2 class="text-center">Уход за изделиями</h2>
             <div class="row">
-                <div class="col-xs-12 col-sm-3 block">
+                <div class="col-xs-12 col-md-3 col-sm-6 block">
                     <div class="block-hover">
                         <div class="title">
                             <img src="/img/other/info-bar1.png" alt="изделия TAVITTA">
@@ -129,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 block">
+                <div class="col-xs-12 col-md-3 col-sm-6 block">
                     <div class="block-hover">
                         <div class="title">
                             <img src="/img/other/info-bar2.png" alt="Cтирка и полоскание">
@@ -145,7 +143,7 @@
                         </div>
                     </div>    
                 </div>
-                <div class="col-xs-12 col-sm-3 block">
+                <div class="col-xs-12 col-md-3 col-sm-6 block">
                     <div class="block-hover">
                         <div class="title">
                             <img src="/img/other/info-bar3.png" alt="Сушка и глаженье">
@@ -160,7 +158,7 @@
                         </div> 
                     </div>       
                 </div>
-                <div class="col-xs-12 col-sm-3 block">
+                <div class="col-xs-12 col-md-3 col-sm-6 block">
                     <div class="block-hover">
                         <div class="title">
                             <img src="/img/other/info-bar4.png" alt="Не рекомендуемые действия">

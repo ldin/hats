@@ -13,7 +13,7 @@
 
     <div class="row row-content">
 
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 ">
 
 
             @if(!empty($type->text) && empty($row))
@@ -51,7 +51,7 @@
                             {{ HTML::image($post->image, $post->name) }}
                         </div>
                         <div class="col-xs-12 col-sm-6 part part-title">
-                            <h2>{{ $post->name }}</h2>
+                            <a href="{{$type->type.'/'.$post->slug}}"><h2>{{ $post->name }}</h2></a>
                         </div>
                     </div>
 

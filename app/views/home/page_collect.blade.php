@@ -64,8 +64,8 @@
                             </div>
                             <div class="row text-center gallery-contact">
                                 <p>
-                                    <a href="/our_customers">Условия поставки</a>
-                                    <a href="#formRequest" class="btn btn-solid js-soft">ЗАКАЗАТЬ КАТАЛОГ</a>
+                                    <a href="/our_customers left">Условия поставки</a>
+                                    <a href="#formRequest" class="btn btn-solid js-soft right">ЗАКАЗАТЬ КАТАЛОГ</a>
                                 </p>
                             </div>
                         </div>

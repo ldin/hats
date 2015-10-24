@@ -3,7 +3,7 @@
 @section('title') {{ !empty($settings['title'])?$settings['title']:'Arin-shapeau' }} @stop
 
 @section('header')
-
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
 @stop
 
 @section('content')
@@ -37,18 +37,17 @@
                             <p class="top-line">Вспоминаем модели прошлых сезонов</p>
                         </div>
                         <div class="col-xs-12">
-                            <div id="carusel" class="scroll-img">
+
+                            <div id="slick">
                                 @if(!empty($slides))
-                                    <ul>
-                                        @foreach($slides as $slide)
-                                            <li>
-                                                    {{HTML::image($slide->image, $slide->name)}}
-                                                    <p class="title">{{$slide->name}}</p>
-                                            </li>                                            
-                                        @endforeach
-                                    </ul>
+                                    @foreach($slides as $slide)
+                                        <div style="background-image:url({{$slide->image}});" class="slick-image">
+                                                <!-- {{HTML::image($slide->image, $slide->name)}} -->
+                                                <p class="title">{{$slide->name}}</p>
+                                        </div>                                            
+                                    @endforeach
                                 @endif
-                            </div>
+                            </div>                           
                         </div>    
 
                     </div>
@@ -187,10 +186,21 @@
 
 @section('scripts')
     <script src="/js/jquery.parallax.js"></script>
-    <script src="/js/jquery.scrollbox.min.js"></script>
+    <script type="text/javascript" src="/js/slick.min.js"></script>
+
     <script type="text/javascript">
     
         jQuery(document).ready(function(){
+
+            $('#slick').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              dots:false,
+              arrows:false
+            });
+
             //parallax
             // Declare parallax on layers
             jQuery('.parallax-layer').parallax(
@@ -198,22 +208,6 @@
                 { xparallax: '20px',    yparallax: '20px', xorigin:0.5, yorigin:0, frameDuration:1 },      // Layer 1
                 { xparallax: '100px',   yparallax: '100px', xorigin:0.5, yorigin:0, frameDuration:1}     // Layer 2
             );
-
-            //scrollbox
-            $('#carusel').scrollbox({
-              direction: 'h',
-              distance: 220,
-              delay:4,
-              speed: 20,
-              linear:true
-            });
-            // $('#carusel-backward').click(function () {
-            //   $('#demo5').trigger('backward');
-            // });
-            // $('#carusel-forward').click(function () {
-            //   $('#demo5').trigger('forward');
-            // });
-
 
         });
 

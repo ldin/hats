@@ -69,7 +69,6 @@ class AdminController extends BaseController {
             $post = Post::find($id);
             $galleries = Gallery::where('post_id', $id)->get();
 
-            //$parent = array();
             $parent[0]= '';
             foreach ($posts as $value) {
                 if($value->id!=$id){$parent[$value['id']]= $value['name'];}
@@ -85,13 +84,11 @@ class AdminController extends BaseController {
     public function postContent($type_id, $id='add')
         {
             $all = Input::all();
-             //var_dump($all); die();
             if(!$all['slug']) {$all['slug'] = BaseController::ru2Lat($all['title']);}
             $rules = array(
                 'name' => 'required|min:2|max:255',
                 'title' => 'required|min:3|max:255',
                 'slug'  => 'required|min:4|max:255|alpha_dash',
-                //'slug'  => 'required|min:4|max:255|alpha_dash|unique:posts,slug,post_id'.$post_id,
             );
             $validator = Validator::make($all, $rules);
             if ( $validator -> fails() ) {
@@ -111,12 +108,10 @@ class AdminController extends BaseController {
             $post->title = $all['title'];
             $post->slug = $all['slug'];
 
-            // $post->preview = $all['preview'];
             $post->text = $all['text'];
             $post->parent = $all['parent'];
             $post->status = isset($all['status'])?true:false;
             $post->order = $all['order'];
-            // $post->noindex = isset($all['noindex'])?true:false;
             $post->description = $all['description'];
             $post->keywords = $all['keywords'];
 
@@ -187,7 +182,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
 
             if(is_numeric($image_id))   {
                 $post = Gallery::find($image_id);
-                // var_dump($post); die(); 
             }
             else {
                 $post = new Gallery();
@@ -196,7 +190,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
             $post->text = $all['text'];
             $post->alt = $all['alt'];
             
-            // $post->status = isset($all['status'])?true:false;
             if(!empty($all['image'])){
                 $full_name = Input::file('image')->getClientOriginalName();
                 $filename=$full_name;
@@ -208,7 +201,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
                 Input::file('image')->move($path, $filename);
                 $post->image = $path.$filename;
 
-                // $img = Image::make($path.$filename)->resize(300, 200);
                 Image::make($path.$filename)->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save($path_sm.$filename);
@@ -374,7 +366,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
             $xml->appendChild($urlset);
             $xml->formatOutput = true;
             $xml->save('sitemap.xml');
-            //$xml->saveXML();
 
             if (!@fopen('sitemap.xml', "r")) {
                 return Redirect::back()->with('error', 'ошибка при обновлении файла sitemap.xml');
@@ -420,9 +411,6 @@ public function postImageGallery($type_id, $post_id, $image_id='add')
             }
 
             $post->name = $all['name'];
-            // $post->text = $all['text'];
-            // $post->button = $all['button'];
-            // $post->link = $all['link'];
             $post->status = isset($all['status'])?true:false;
 
             if(isset($all['image'])){

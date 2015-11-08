@@ -158,8 +158,6 @@ class HomeController extends BaseController {
             $post->save();
 
             $mail = Setting::where('name', 'email')->first()->value;
-            // $mail = 'ldin04ka@mail.ru';
-             // var_dump($mail); die();
 
             $messages = '<b>Пользователь: </b>'.$all['name'].'<br>';
             $messages .= '<b>Сообщение: </b>'.$all['text'].'<br>';
@@ -212,9 +210,7 @@ class HomeController extends BaseController {
             return false;
         }
 
-
-        // var_dump($results); die();
-    return Response::json($results);
+        return Response::json($results);
     }
 
 
@@ -223,7 +219,6 @@ class HomeController extends BaseController {
         $type=Type::where('type', 'rate')->first();
         $posts = Post::where('type_id', '=', $type->id)->where('status',1)->where('parent', '=', '0')->orderBy('created_at', 'desc')->get();
         $posts_child = Post::where('type_id', '=', $type->id)->where('status',1)->where('parent', '!=', '0')->orderBy('created_at', 'desc')->get();
-        // var_dump($slug);
         if(!empty($slug)){
             $row = Post::where('slug', $slug)->first();
             $posts_child = Post::where('type_id', '=', $type->id)->where('parent', $row->id)->where('status',1)->orderBy('created_at', 'desc')->get();
